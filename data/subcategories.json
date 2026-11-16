@@ -1,0 +1,212 @@
+[
+  {
+    "id": "basics",
+    "category": "data-structures",
+    "title": "資料結構基礎",
+    "description": "ADT、靜態與動態結構"
+  },
+  {
+    "id": "linear",
+    "category": "data-structures",
+    "title": "線性資料結構",
+    "description": "Array、Linked List、Stack、Queue"
+  },
+  {
+    "id": "trees",
+    "category": "data-structures",
+    "title": "樹狀資料結構",
+    "description": "BST、AVL、Heap、Trie"
+  },
+  {
+    "id": "graphs",
+    "category": "data-structures",
+    "title": "圖形資料結構",
+    "description": "節點、邊、儲存結構"
+  },
+  {
+    "id": "hashing",
+    "category": "data-structures",
+    "title": "雜湊與集合",
+    "description": "Hash Table、Union-Find"
+  },
+  {
+    "id": "c-basics",
+    "category": "programming",
+    "title": "C 語言基礎",
+    "description": "型別、函式、陣列、結構體"
+  },
+  {
+    "id": "memory",
+    "category": "programming",
+    "title": "記憶體與位址",
+    "description": "Stack、Heap、Data、BSS、Text"
+  },
+  {
+    "id": "pointers",
+    "category": "programming",
+    "title": "指標技術",
+    "description": "取址、解參考、指標運算"
+  },
+  {
+    "id": "dynamic-memory",
+    "category": "programming",
+    "title": "動態記憶體管理",
+    "description": "malloc、free 與安全性"
+  },
+  {
+    "id": "tooling",
+    "category": "programming",
+    "title": "程式執行與工具",
+    "description": "編譯、連結與除錯"
+  },
+  {
+    "id": "analysis",
+    "category": "algorithms",
+    "title": "演算法分析",
+    "description": "複雜度與正確性"
+  },
+  {
+    "id": "search",
+    "category": "algorithms",
+    "title": "搜尋演算法",
+    "description": "Linear、Binary Search"
+  },
+  {
+    "id": "sort",
+    "category": "algorithms",
+    "title": "排序演算法",
+    "description": "Merge、Quick、Heap Sort"
+  },
+  {
+    "id": "strategies",
+    "category": "algorithms",
+    "title": "演算法設計策略",
+    "description": "Greedy、DP、Backtracking"
+  },
+  {
+    "id": "graph-algorithms",
+    "category": "algorithms",
+    "title": "圖論演算法",
+    "description": "BFS、DFS、最短路徑"
+  },
+  {
+    "id": "optimization",
+    "category": "algorithms",
+    "title": "最佳化與進階演算法",
+    "description": "A*、Q-learning、DQN"
+  },
+  {
+    "id": "os-basics",
+    "category": "operating-systems",
+    "title": "OS 核心基礎",
+    "description": "Kernel、Syscall、Interrupt"
+  },
+  {
+    "id": "processes",
+    "category": "operating-systems",
+    "title": "程序與執行緒",
+    "description": "Process、Thread、IPC"
+  },
+  {
+    "id": "scheduling",
+    "category": "operating-systems",
+    "title": "CPU 排程",
+    "description": "FCFS、SJF、RR"
+  },
+  {
+    "id": "virtual-memory",
+    "category": "operating-systems",
+    "title": "記憶體管理",
+    "description": "Paging、TLB、Page Fault"
+  },
+  {
+    "id": "synchronization",
+    "category": "operating-systems",
+    "title": "同步與死結",
+    "description": "Mutex、Semaphore、Deadlock"
+  },
+  {
+    "id": "storage",
+    "category": "operating-systems",
+    "title": "儲存與檔案系統",
+    "description": "File System、Disk I/O"
+  },
+  {
+    "id": "models",
+    "category": "networking",
+    "title": "網路模型與基礎",
+    "description": "OSI、TCP/IP、封裝"
+  },
+  {
+    "id": "lan",
+    "category": "networking",
+    "title": "資料鏈結與區域網路",
+    "description": "MAC、Ethernet、VLAN"
+  },
+  {
+    "id": "ip",
+    "category": "networking",
+    "title": "IP 與子網路",
+    "description": "IPv4、CIDR、NAT、DHCP"
+  },
+  {
+    "id": "transport",
+    "category": "networking",
+    "title": "傳輸層與可靠性",
+    "description": "TCP、UDP、Congestion Control"
+  },
+  {
+    "id": "routing",
+    "category": "networking",
+    "title": "路由與網際網路",
+    "description": "Routing Table、OSPF、BGP"
+  },
+  {
+    "id": "application",
+    "category": "networking",
+    "title": "應用層與網路診斷",
+    "description": "DNS、HTTP、TLS、Ping"
+  },
+  {
+    "id": "architecture",
+    "category": "wifi",
+    "title": "Wi-Fi 基本架構",
+    "description": "STA、AP、頻段與頻道"
+  },
+  {
+    "id": "wireless-signal",
+    "category": "wifi",
+    "title": "無線傳播與訊號品質",
+    "description": "FSPL、RSSI、Noise、SINR"
+  },
+  {
+    "id": "phy-mac",
+    "category": "wifi",
+    "title": "Wi-Fi PHY / MAC 技術",
+    "description": "OFDM、RU、MIMO、MCS"
+  },
+  {
+    "id": "capacity",
+    "category": "wifi",
+    "title": "Throughput 與容量模型",
+    "description": "PHY Rate、Airtime、瓶頸容量"
+  },
+  {
+    "id": "generations",
+    "category": "wifi",
+    "title": "Wi-Fi 世代比較",
+    "description": "Wi-Fi 5、6、6E、7"
+  },
+  {
+    "id": "mesh",
+    "category": "wifi",
+    "title": "Mesh 網路與部署",
+    "description": "Backhaul、AP Placement、Heatmap"
+  },
+  {
+    "id": "ai-optimization",
+    "category": "wifi",
+    "title": "無線網路最佳化與 AI",
+    "description": "CNN、GNN、DRL"
+  }
+]

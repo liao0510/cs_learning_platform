@@ -1,0 +1,44 @@
+[
+  {
+    "id": "data-structures",
+    "title": "資料結構",
+    "english": "Data Structures",
+    "icon": "layers",
+    "description": "從陣列到圖論，理解資料如何組織與存取。"
+  },
+  {
+    "id": "programming",
+    "title": "程式設計",
+    "english": "Programming",
+    "icon": "code",
+    "description": "聚焦 C 語言、指標、記憶體與程式執行。"
+  },
+  {
+    "id": "algorithms",
+    "title": "演算法",
+    "english": "Algorithms",
+    "icon": "git-branch",
+    "description": "以視覺化步驟理解搜尋、排序與最佳化。"
+  },
+  {
+    "id": "operating-systems",
+    "title": "作業系統",
+    "english": "Operating Systems",
+    "icon": "cpu",
+    "description": "理解程序排程、虛擬記憶體及同步。"
+  },
+  {
+    "id": "networking",
+    "title": "網路概論",
+    "english": "Networking",
+    "icon": "network",
+    "description": "從 OSI、IP 到封包傳輸與網路診斷。"
+  },
+  {
+    "id": "wifi",
+    "title": "Wi-Fi 與無線網路",
+    "english": "Wireless Networking",
+    "icon": "wifi",
+    "description": "深入 RSSI、SINR、MCS、Throughput 與 Mesh。"
+  }
+]

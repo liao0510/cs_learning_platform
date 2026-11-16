@@ -1,0 +1,57 @@
+{
+  "id": "process-thread",
+  "category": "operating-systems",
+  "subcategory": "processes",
+  "title": "Process 與 Thread：隔離與共享",
+  "summary": "分辨程序與執行緒的資源、執行方式及常見同步需求。",
+  "difficulty": "beginner",
+  "minutes": 9,
+  "keywords": [
+    "Process",
+    "Thread",
+    "Context Switch"
+  ],
+  "sections": [
+    {
+      "title": "兩者的差異",
+      "type": "text",
+      "paragraphs": [
+        "Process（程序）通常擁有獨立的虛擬位址空間及資源描述；Thread（執行緒）是在程序內可被排程的執行單位。",
+        "同一個 Process 內的多個 Thread 通常共享程式碼、Heap 和檔案等資源，但各自有自己的暫存器狀態與 Stack。"
+      ]
+    },
+    {
+      "title": "共享與隔離示意",
+      "type": "diagram",
+      "diagram": "process"
+    },
+    {
+      "title": "為什麼需要同步",
+      "type": "bullets",
+      "items": [
+        "多個 Thread 同時修改共享資料可能發生 Race Condition。",
+        "Mutex 與 Semaphore 可協助同步，但使用方式不當可能造成 Deadlock。",
+        "多核心可同時執行多個 Thread；多執行緒不保證一定會更快。"
+      ]
+    }
+  ],
+  "takeaways": [
+    "Process 著重資源與位址空間的隔離。",
+    "Thread 是程序內的執行單位，並共享多數程序資源。",
+    "共享可變資料時需要考量同步與競爭條件。"
+  ],
+  "quiz": [
+    {
+      "question": "同一 Process 中不同 Thread 通常共享哪項資源？",
+      "choices": [
+        "各自的 Stack",
+        "各自的暫存器",
+        "Heap",
+        "程式計數器"
+      ],
+      "answer": 2,
+      "explanation": "同一個 Process 中的 Thread 通常共享 Heap，但各自有執行上下文與 Stack。"
+    }
+  ],
+  "references": []
+}

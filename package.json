@@ -1,0 +1,7 @@
+{
+  "name": "cs-atlas-static-learning",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Static learning platform; package file is used only for local Node ESM tests, no dependencies or install required."
+}

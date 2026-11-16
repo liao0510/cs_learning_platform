@@ -1,0 +1,124 @@
+[
+  {
+    "id": "stack-queue",
+    "category": "data-structures",
+    "subcategory": "linear",
+    "title": "Stack 與 Queue：資料進出的順序",
+    "summary": "透過實際操作，理解後進先出（LIFO）與先進先出（FIFO）。",
+    "difficulty": "beginner",
+    "minutes": 8,
+    "keywords": [
+      "Stack",
+      "Queue",
+      "LIFO",
+      "FIFO"
+    ]
+  },
+  {
+    "id": "c-memory",
+    "category": "programming",
+    "subcategory": "memory",
+    "title": "C 語言記憶體：指標、Stack、Heap",
+    "summary": "用圖解認識程式常見記憶體區段，以及 malloc/free 的基本責任。",
+    "difficulty": "intermediate",
+    "minutes": 12,
+    "keywords": [
+      "C",
+      "pointer",
+      "malloc",
+      "free",
+      "Stack",
+      "Heap"
+    ]
+  },
+  {
+    "id": "binary-search",
+    "category": "algorithms",
+    "subcategory": "search",
+    "title": "Binary Search：二分搜尋逐步演示",
+    "summary": "透過 low、mid、high 指標，觀察如何在排序資料中快速縮小搜尋區間。",
+    "difficulty": "beginner",
+    "minutes": 10,
+    "keywords": [
+      "binary search",
+      "二分搜尋",
+      "log n"
+    ]
+  },
+  {
+    "id": "process-thread",
+    "category": "operating-systems",
+    "subcategory": "processes",
+    "title": "Process 與 Thread：隔離與共享",
+    "summary": "分辨程序與執行緒的資源、執行方式及常見同步需求。",
+    "difficulty": "beginner",
+    "minutes": 9,
+    "keywords": [
+      "Process",
+      "Thread",
+      "Context Switch"
+    ]
+  },
+  {
+    "id": "osi-model",
+    "category": "networking",
+    "subcategory": "models",
+    "title": "OSI 七層模型：資料如何封裝",
+    "summary": "從 Application 到 Physical，理解網路通訊的分工與封裝概念。",
+    "difficulty": "beginner",
+    "minutes": 9,
+    "keywords": [
+      "OSI",
+      "TCP/IP",
+      "Encapsulation"
+    ]
+  },
+  {
+    "id": "signal-basics",
+    "category": "wifi",
+    "subcategory": "wireless-signal",
+    "title": "RSSI、SNR、SINR 與訊號衰減",
+    "summary": "理解 dBm、FSPL、雜訊功率與干擾，並使用公式計算器練習。",
+    "difficulty": "intermediate",
+    "minutes": 16,
+    "keywords": [
+      "FSPL",
+      "RSSI",
+      "SNR",
+      "SINR",
+      "Noise"
+    ]
+  },
+  {
+    "id": "throughput-mcs",
+    "category": "wifi",
+    "subcategory": "capacity",
+    "title": "Throughput、MCS 與速率限制",
+    "summary": "區分理論通道容量、PHY 速率和應用層吞吐量。",
+    "difficulty": "advanced",
+    "minutes": 14,
+    "keywords": [
+      "Throughput",
+      "MCS",
+      "Shannon",
+      "OFDMA",
+      "PHY"
+    ]
+  },
+  {
+    "id": "wifi-generations",
+    "category": "wifi",
+    "subcategory": "generations",
+    "title": "Wi-Fi 5、6、6E、7 技術比較",
+    "summary": "以技術演進理解 OFDMA、6 GHz、Multi-Link Operation 等功能。",
+    "difficulty": "intermediate",
+    "minutes": 11,
+    "keywords": [
+      "Wi-Fi 5",
+      "Wi-Fi 6",
+      "Wi-Fi 7",
+      "OFDMA",
+      "MLO"
+    ]
+  }
+]

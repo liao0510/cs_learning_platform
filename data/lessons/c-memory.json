@@ -1,0 +1,66 @@
+{
+  "id": "c-memory",
+  "category": "programming",
+  "subcategory": "memory",
+  "title": "C 語言記憶體：指標、Stack、Heap",
+  "summary": "用圖解認識程式常見記憶體區段，以及 malloc/free 的基本責任。",
+  "difficulty": "intermediate",
+  "minutes": 12,
+  "keywords": [
+    "C",
+    "pointer",
+    "malloc",
+    "free",
+    "Stack",
+    "Heap"
+  ],
+  "sections": [
+    {
+      "title": "常見記憶體區域",
+      "type": "text",
+      "paragraphs": [
+        "概念性行程記憶體配置常分為 Text、已初始化資料區（Data）、未初始化資料區（BSS）、Heap 與 Stack。實際虛擬位址布局由作業系統、編譯器與執行環境決定，並非所有平台都照同一張圖排列。"
+      ]
+    },
+    {
+      "title": "記憶體區段圖解",
+      "type": "diagram",
+      "diagram": "memory"
+    },
+    {
+      "title": "指標與配置範例",
+      "type": "code",
+      "language": "c",
+      "code": "#include <stdlib.h>\n\nint main(void) {\n    int local = 7;               // 常見於 Stack\n    int *p = malloc(sizeof *p); // 動態配置（通常在 Heap）\n    if (p == NULL) return 1;\n    *p = local + 3;\n    free(p);                    // 釋放配置\n    p = NULL;                   // 避免再使用舊位址\n    return 0;\n}"
+    },
+    {
+      "title": "容易混淆的地方",
+      "type": "bullets",
+      "items": [
+        "指標變數本身儲存的是位址；指向的資料可能位於其他區域。",
+        "malloc 取得的記憶體必須在不再使用時 free，且不能重複 free。",
+        "存取已釋放記憶體（Use-after-free）是未定義行為，不能依賴偶然可用的結果。"
+      ]
+    }
+  ],
+  "takeaways": [
+    "Stack 常用於函式呼叫與區域變數；Heap 通常管理動態配置。",
+    "指標是位址值，不等同於它指向的內容。",
+    "malloc 成功與否要檢查；完成後記得 free。"
+  ],
+  "quiz": [
+    {
+      "question": "下列哪個函式用於釋放 malloc 配置的記憶體？",
+      "choices": [
+        "delete",
+        "release",
+        "free",
+        "clear"
+      ],
+      "answer": 2,
+      "explanation": "標準 C 以 free(pointer) 釋放 malloc 配置的區塊。"
+    }
+  ],
+  "references": [],
+  "demo": "memory"
+}

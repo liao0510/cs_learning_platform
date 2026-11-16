@@ -1,0 +1,97 @@
+{
+  "id": "signal-basics",
+  "category": "wifi",
+  "subcategory": "wireless-signal",
+  "title": "RSSI、SNR、SINR 與訊號衰減",
+  "summary": "理解 dBm、FSPL、雜訊功率與干擾，並使用公式計算器練習。",
+  "difficulty": "intermediate",
+  "minutes": 16,
+  "keywords": [
+    "FSPL",
+    "RSSI",
+    "SNR",
+    "SINR",
+    "Noise"
+  ],
+  "sections": [
+    {
+      "title": "四個不同概念",
+      "type": "text",
+      "paragraphs": [
+        "RSSI 常用來描述接收訊號強度，但實際定義與讀值方式會依晶片或設備而不同。SNR 是訊號與雜訊的比值；SINR 則將干擾與雜訊一起列入分母。",
+        "dBm 是相對 1 mW 的功率對數單位；dB 是兩個值的比值，不應把兩者當成相同意義。"
+      ]
+    },
+    {
+      "title": "FSPL：自由空間路徑損耗",
+      "type": "formula",
+      "formula": "FSPL(dB) = 32.44 + 20 log₁₀(f_MHz) + 20 log₁₀(d_km)",
+      "details": [
+        "f_MHz：頻率，MHz，必須大於 0。",
+        "d_km：距離，km，必須大於 0。",
+        "自由空間、遠場傳播近似；不含牆壁、多徑與障礙物。"
+      ],
+      "calculator": "fspl"
+    },
+    {
+      "title": "RSSI：簡化接收功率模型",
+      "type": "formula",
+      "formula": "P_rx(dBm) = P_tx(dBm) + G_tx(dBi) + G_rx(dBi) − FSPL(dB) − L_extra(dB)",
+      "details": [
+        "此為鏈路預算簡化模型，實際 RSSI 讀值未必等於計算的接收功率。",
+        "不含天線極化、近場、快速衰落及硬體實作差異。"
+      ],
+      "calculator": "rssi"
+    },
+    {
+      "title": "熱雜訊功率",
+      "type": "formula",
+      "formula": "N(dBm) ≈ −174 + 10 log₁₀(B_Hz) + NF(dB)",
+      "details": [
+        "B_Hz：等效雜訊頻寬（Hz），必須大於 0。",
+        "−174 dBm/Hz 是約 290 K 時的熱雜訊密度近似值。"
+      ],
+      "calculator": "noise"
+    },
+    {
+      "title": "SINR：訊號、干擾與雜訊",
+      "type": "formula",
+      "formula": "SINR(dB) = 10 log₁₀[S_mW / (ΣI_mW + N_mW)]",
+      "details": [
+        "每筆 dBm 功率先轉換成 mW，干擾功率與雜訊才能相加。",
+        "此示範採單一等效干擾功率，未涵蓋時變干擾與接收器實作。"
+      ],
+      "calculator": "sinr"
+    }
+  ],
+  "takeaways": [
+    "FSPL 是理想自由空間損耗，不能直接當室內量測結果。",
+    "噪聲與干擾在加總前必須由 dBm 轉換為 mW。",
+    "SINR 的分母包含干擾與雜訊，因此與 SNR 不同。"
+  ],
+  "quiz": [
+    {
+      "question": "計算兩個干擾源的總功率時，正確的方法是？",
+      "choices": [
+        "直接加 dBm",
+        "先轉 mW 加總，再轉回 dBm",
+        "先把 dB 相加",
+        "只取最小的干擾"
+      ],
+      "answer": 1,
+      "explanation": "dBm 屬對數功率單位，須先轉線性功率再加總。"
+    }
+  ],
+  "references": [
+    {
+      "title": "ITU-R P.525-3：Calculation of free-space attenuation",
+      "url": "https://www.itu.int/dms_pubrec/itu-r/rec/p/R-REC-P.525-3-201611-S%21%21PDF-E.pdf"
+    }
+  ],
+  "calculator": [
+    "fspl",
+    "rssi",
+    "noise",
+    "sinr"
+  ]
+}

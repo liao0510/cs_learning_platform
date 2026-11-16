@@ -1,0 +1,97 @@
+{
+  "id": "wifi-generations",
+  "category": "wifi",
+  "subcategory": "generations",
+  "title": "Wi-Fi 5、6、6E、7 技術比較",
+  "summary": "以技術演進理解 OFDMA、6 GHz、Multi-Link Operation 等功能。",
+  "difficulty": "intermediate",
+  "minutes": 11,
+  "keywords": [
+    "Wi-Fi 5",
+    "Wi-Fi 6",
+    "Wi-Fi 7",
+    "OFDMA",
+    "MLO"
+  ],
+  "sections": [
+    {
+      "title": "技術世代概覽",
+      "type": "text",
+      "paragraphs": [
+        "Wi-Fi 世代名稱對應不同 IEEE 802.11 標準家族。市場功能依設備支援、地區法規、頻段與認證而異；世代支援並不表示所有新功能在每個裝置上都可用。"
+      ]
+    },
+    {
+      "title": "版本比較表",
+      "type": "table",
+      "headers": [
+        "版本",
+        "常見標準",
+        "關鍵技術（摘要）"
+      ],
+      "rows": [
+        [
+          "Wi-Fi 5",
+          "802.11ac",
+          "5 GHz、MU-MIMO（下行）、256-QAM"
+        ],
+        [
+          "Wi-Fi 6",
+          "802.11ax",
+          "OFDMA、1024-QAM、Target Wake Time"
+        ],
+        [
+          "Wi-Fi 6E",
+          "802.11ax",
+          "將 Wi-Fi 6 擴展至 6 GHz（須當地允許）"
+        ],
+        [
+          "Wi-Fi 7",
+          "802.11be",
+          "Multi-Link Operation、320 MHz（視法規頻段）、4K-QAM"
+        ]
+      ]
+    },
+    {
+      "title": "理解 Wi-Fi 7 技術",
+      "type": "bullets",
+      "items": [
+        "MLO：支援設備可透過多個鏈路協同運作，實際模式取決於設備及配置。",
+        "320 MHz：增加可用頻寬，但可用性受頻譜、地區及設備限制。",
+        "4K-QAM：每個調變符號可承載更多位元，但需要足夠的鏈路品質。",
+        "Preamble puncturing：在部分情況下避開子頻段障礙，有助於頻譜運用。"
+      ]
+    },
+    {
+      "title": "如何選擇",
+      "type": "text",
+      "paragraphs": [
+        "升級選擇應考量干擾環境、頻譜可用性、終端支援、AP 設計及網路需求。Wi-Fi 7 不保證在所有場景均比 Wi-Fi 6 快。"
+      ]
+    }
+  ],
+  "takeaways": [
+    "Wi-Fi 6 的關鍵改進之一是 OFDMA。",
+    "Wi-Fi 6E 主要將 802.11ax 功能帶到 6 GHz 頻段。",
+    "Wi-Fi 7 的代表特性包括 MLO、320 MHz 與 4K-QAM，但支援需視條件。"
+  ],
+  "quiz": [
+    {
+      "question": "Wi-Fi 6E 相較 Wi-Fi 6 最核心的命名區別是？",
+      "choices": [
+        "一定使用 MLO",
+        "支援 6 GHz 頻段",
+        "全部設備都支援 320 MHz",
+        "不再使用 OFDM"
+      ],
+      "answer": 1,
+      "explanation": "Wi-Fi 6E 指將 Wi-Fi 6／802.11ax 相關能力擴展至 6 GHz 頻段。"
+    }
+  ],
+  "references": [
+    {
+      "title": "Wi-Fi Alliance – Discover Wi-Fi",
+      "url": "https://www.wi-fi.org/discover-wi-fi"
+    }
+  ]
+}

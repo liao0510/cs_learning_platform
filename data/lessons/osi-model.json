@@ -1,0 +1,56 @@
+{
+  "id": "osi-model",
+  "category": "networking",
+  "subcategory": "models",
+  "title": "OSI 七層模型：資料如何封裝",
+  "summary": "從 Application 到 Physical，理解網路通訊的分工與封裝概念。",
+  "difficulty": "beginner",
+  "minutes": 9,
+  "keywords": [
+    "OSI",
+    "TCP/IP",
+    "Encapsulation"
+  ],
+  "sections": [
+    {
+      "title": "七層不是七個獨立硬體",
+      "type": "text",
+      "paragraphs": [
+        "OSI 是概念參考模型，協助理解網路通訊職責。真實網際網路常使用 TCP/IP 模型描述協定堆疊，兩者並非一對一實作。"
+      ]
+    },
+    {
+      "title": "七層互動圖解",
+      "type": "diagram",
+      "diagram": "osi"
+    },
+    {
+      "title": "傳送與接收",
+      "type": "bullets",
+      "items": [
+        "傳送端向下層處理資料，逐層加入必要的標頭等控制資訊。",
+        "接收端從底層向上解析，完成相應的處理。",
+        "例如 HTTP 通常屬於應用層，TCP 屬於傳輸層，IP 屬於網路層。"
+      ]
+    }
+  ],
+  "takeaways": [
+    "OSI 七層是概念分層工具。",
+    "封裝是資料往下層傳遞時加入協定資訊的過程。",
+    "TCP/IP 是現代網際網路主要使用的協定架構。"
+  ],
+  "quiz": [
+    {
+      "question": "IP 協定在 OSI 模型中通常歸於哪一層？",
+      "choices": [
+        "實體層",
+        "網路層",
+        "會議層",
+        "應用層"
+      ],
+      "answer": 1,
+      "explanation": "IP 負責跨網路定址與轉送，屬於 OSI 的網路層。"
+    }
+  ],
+  "references": []
+}

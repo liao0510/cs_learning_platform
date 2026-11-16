@@ -1,0 +1,59 @@
+{
+  "id": "stack-queue",
+  "category": "data-structures",
+  "subcategory": "linear",
+  "title": "Stack 與 Queue：資料進出的順序",
+  "summary": "透過實際操作，理解後進先出（LIFO）與先進先出（FIFO）。",
+  "difficulty": "beginner",
+  "minutes": 8,
+  "keywords": [
+    "Stack",
+    "Queue",
+    "LIFO",
+    "FIFO"
+  ],
+  "sections": [
+    {
+      "title": "核心觀念",
+      "type": "text",
+      "paragraphs": [
+        "Stack（堆疊）只從頂端存取，最後放入的元素最先被取出。Queue（佇列）則從尾端加入、前端移除，先加入的元素最先離開。",
+        "這兩種資料結構都能以陣列或鏈結串列實作。一般實作下，Push、Pop、Enqueue 和 Dequeue 的時間複雜度通常是 O(1)。"
+      ]
+    },
+    {
+      "title": "互動操作：加入與移除",
+      "type": "demo",
+      "demo": "stack-queue",
+      "description": "選擇 Stack 或 Queue，加入數值並觀察移除順序。"
+    },
+    {
+      "title": "實際應用",
+      "type": "bullets",
+      "items": [
+        "Stack：函式呼叫、Undo 操作、括號配對。",
+        "Queue：工作排程、訊息緩衝、廣度優先搜尋（BFS）。"
+      ]
+    }
+  ],
+  "takeaways": [
+    "Stack 遵循 LIFO；Queue 遵循 FIFO。",
+    "兩者重點是「限制操作方式」，不只是容器形狀。",
+    "在合適的實作下，基本插入與移除多為 O(1)。"
+  ],
+  "quiz": [
+    {
+      "question": "Stack 依序 Push 2、5、8，第一次 Pop 的值是？",
+      "choices": [
+        "2",
+        "5",
+        "8",
+        "無法判斷"
+      ],
+      "answer": 2,
+      "explanation": "Stack 是後進先出，最後加入的 8 會先移除。"
+    }
+  ],
+  "references": [],
+  "demo": "stack-queue"
+}

@@ -1,0 +1,79 @@
+{
+  "id": "throughput-mcs",
+  "category": "wifi",
+  "subcategory": "capacity",
+  "title": "Throughput、MCS 與速率限制",
+  "summary": "區分理論通道容量、PHY 速率和應用層吞吐量。",
+  "difficulty": "advanced",
+  "minutes": 14,
+  "keywords": [
+    "Throughput",
+    "MCS",
+    "Shannon",
+    "OFDMA",
+    "PHY"
+  ],
+  "sections": [
+    {
+      "title": "三個速率不是同一件事",
+      "type": "text",
+      "paragraphs": [
+        "Shannon-Hartley 公式是理想化通道容量的理論上界。PHY Rate 是由調變、編碼、子載波、空間串流及 OFDM 符號時間計算的實體層位元率。應用層 Throughput 還受到 MAC 開銷、重傳、競爭、傳輸協定與設備限制影響。",
+        "MCS（Modulation and Coding Scheme）指定調變階數與編碼率，但不能僅靠單一 SINR 數值推得通用且必然成立的 MCS。"
+      ]
+    },
+    {
+      "title": "Shannon 理論容量",
+      "type": "formula",
+      "formula": "C(bit/s) = B(Hz) × log₂(1 + SINR_linear)",
+      "details": [
+        "此模型假設理想化通道及適用的雜訊模型。",
+        "輸出不是 Wi-Fi 實測 Throughput 或必然可達的 PHY Rate。"
+      ],
+      "calculator": "shannon"
+    },
+    {
+      "title": "OFDM PHY Rate 教學模型",
+      "type": "formula",
+      "formula": "R(bit/s) = N_SD × N_BPSC × R_c × N_SS / T_symbol",
+      "details": [
+        "N_SD：有效資料子載波數；N_BPSC：每子載波每符號的位元數。",
+        "R_c：編碼率；N_SS：空間串流數；T_symbol：OFDM 符號時間（秒）。",
+        "必須由具體 PHY 格式 / RU / GI / MCS 參數決定數值；此模型不含前導碼、管理、ACK、競爭、封包損耗及重傳。"
+      ],
+      "calculator": "ofdm-rate"
+    },
+    {
+      "title": "Mesh Backhaul 為什麼有瓶頸",
+      "type": "bullets",
+      "items": [
+        "單一路徑的每跳可用容量不同；在簡化模型中，最小單跳容量會限制端到端上限。",
+        "共用頻道與半雙工中繼的 Airtime 競爭可能使可用吞吐量遠低於單跳瓶頸。",
+        "切勿將最高 PHY Rate 直接當作使用者的有效傳輸速率。"
+      ]
+    }
+  ],
+  "takeaways": [
+    "Shannon capacity 是理論值，不等於實際 Wi-Fi Throughput。",
+    "MCS 與 PHY Rate 取決於調變、編碼、頻寬、GI、空間串流等條件。",
+    "Mesh 多跳需要考慮 Backhaul 容量與共用 Airtime。"
+  ],
+  "quiz": [
+    {
+      "question": "下列哪項最適合代表使用者實際收到的資料速率？",
+      "choices": [
+        "Shannon 上界",
+        "PHY Rate",
+        "量測的應用層 Throughput",
+        "MCS Index"
+      ],
+      "answer": 2,
+      "explanation": "應用層 Throughput 是實際有效資料交付速率；其他值無法直接代表它。"
+    }
+  ],
+  "references": [],
+  "calculator": [
+    "shannon",
+    "ofdm-rate"
+  ]
+}
