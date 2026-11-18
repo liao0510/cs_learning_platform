@@ -1,0 +1,87 @@
+{
+  "id": "guide-operating-systems-synchronization",
+  "category": "operating-systems",
+  "subcategory": "synchronization",
+  "title": "Race Condition、Mutex、Semaphore、Deadlock",
+  "summary": "涵蓋同步與死結的重要概念、條件、實例及自我檢測。",
+  "difficulty": "intermediate",
+  "minutes": 15,
+  "keywords": [
+    "同步與死結",
+    "競態與臨界區",
+    "Mutex 與 Semaphore",
+    "Producer–Consumer",
+    "死結條件",
+    "Banker’s Algorithm"
+  ],
+  "sections": [
+    {
+      "title": "競態與臨界區",
+      "type": "text",
+      "paragraphs": [
+        "多個執行緒同時修改共享狀態，如果結果取決於執行交錯，就可能發生 Race Condition。"
+      ]
+    },
+    {
+      "title": "Mutex 與 Semaphore",
+      "type": "text",
+      "paragraphs": [
+        "Mutex 控制單一執行者持有互斥鎖；Counting Semaphore 可表示多個可用資源，語意不同。"
+      ]
+    },
+    {
+      "title": "Producer–Consumer",
+      "type": "text",
+      "paragraphs": [
+        "生產者放資料、消費者取資料；有界緩衝區須同步空位、項目數量與共享資料更新。"
+      ]
+    },
+    {
+      "title": "死結條件",
+      "type": "text",
+      "paragraphs": [
+        "互斥、持有並等待、不可搶奪與循環等待同時成立時可能發生死結；破壞其中任一條件可避免該型死結。"
+      ]
+    },
+    {
+      "title": "Banker’s Algorithm",
+      "type": "text",
+      "paragraphs": [
+        "在已知最大需求的抽象資源分配模型下，Banker’s Algorithm 用安全狀態檢查來避免進入不安全分配。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "Thread A 先鎖 L1 再等 L2；Thread B 先鎖 L2 再等 L1，可能造成循環等待。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    }
+  ],
+  "takeaways": [
+    "多個執行緒同時修改共享狀態，如果結果取決於執行交錯，就可能發生 Race Condition。",
+    "Mutex 控制單一執行者持有互斥鎖；Counting Semaphore 可表示多個可用資源，語意不同。",
+    "生產者放資料、消費者取資料；有界緩衝區須同步空位、項目數量與共享資料更新。",
+    "互斥、持有並等待、不可搶奪與循環等待同時成立時可能發生死結；破壞其中任一條件可避免該型死結。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「競態與臨界區」，下列何者最合理？",
+      "choices": [
+        "多個執行緒同時修改共享狀態，如果結果取決於執行交錯，就可能發生 Race Condition。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "多個執行緒同時修改共享狀態，如果結果取決於執行交錯，就可能發生 Race Condition。"
+    }
+  ],
+  "references": [
+    {
+      "title": "Operating Systems: Three Easy Pieces",
+      "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/"
+    }
+  ]
+}

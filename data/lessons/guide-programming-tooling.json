@@ -1,0 +1,79 @@
+{
+  "id": "guide-programming-tooling",
+  "category": "programming",
+  "subcategory": "tooling",
+  "title": "C 的編譯、連結與除錯工具",
+  "summary": "涵蓋程式執行與工具的重要概念、條件、實例及自我檢測。",
+  "difficulty": "beginner",
+  "minutes": 12,
+  "keywords": [
+    "程式執行與工具",
+    "從原始碼到執行檔",
+    "Header 與 Source",
+    "GCC 與警告",
+    "GDB 與 Make"
+  ],
+  "sections": [
+    {
+      "title": "從原始碼到執行檔",
+      "type": "text",
+      "paragraphs": [
+        "前處理展開 #include/#define，編譯與組譯產生目標碼，連結器解析外部符號並組成可執行檔。"
+      ]
+    },
+    {
+      "title": "Header 與 Source",
+      "type": "text",
+      "paragraphs": [
+        "Header 放宣告，.c 放函式定義。一般跨檔案函式可在 header 宣告，避免重複定義與型別不一致。"
+      ]
+    },
+    {
+      "title": "GCC 與警告",
+      "type": "text",
+      "paragraphs": [
+        "gcc -std=c11 -Wall -Wextra -pedantic 可協助檢查問題；-g 輸出除錯資訊；警告不是程式正確性的保證。"
+      ]
+    },
+    {
+      "title": "GDB 與 Make",
+      "type": "text",
+      "paragraphs": [
+        "GDB 可設定斷點、逐步執行、查看變數；Makefile 把編譯依賴和指令文件化，減少手動輸入與漏編。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "執行 gcc -std=c11 -Wall -Wextra -g main.c -o app，再用 gdb ./app 設斷點追蹤變數。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    }
+  ],
+  "takeaways": [
+    "前處理展開 #include/#define，編譯與組譯產生目標碼，連結器解析外部符號並組成可執行檔。",
+    "Header 放宣告，.c 放函式定義。",
+    "gcc -std=c11 -Wall -Wextra -pedantic 可協助檢查問題；-g 輸出除錯資訊；警告不是程式正確性的保證。",
+    "GDB 可設定斷點、逐步執行、查看變數；Makefile 把編譯依賴和指令文件化，減少手動輸入與漏編。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「從原始碼到執行檔」，下列何者最合理？",
+      "choices": [
+        "前處理展開 #include/#define，編譯與組譯產生目標碼，連結器解析外部符號並組成可執行檔。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "前處理展開 #include/#define，編譯與組譯產生目標碼，連結器解析外部符號並組成可執行檔。"
+    }
+  ],
+  "references": [
+    {
+      "title": "cppreference：C language",
+      "url": "https://en.cppreference.com/w/c/language"
+    }
+  ]
+}

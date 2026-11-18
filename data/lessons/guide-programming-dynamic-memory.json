@@ -1,0 +1,89 @@
+{
+  "id": "guide-programming-dynamic-memory",
+  "category": "programming",
+  "subcategory": "dynamic-memory",
+  "title": "malloc、calloc、realloc、free 與安全性",
+  "summary": "涵蓋動態記憶體管理的重要概念、條件、實例及自我檢測。",
+  "difficulty": "intermediate",
+  "minutes": 12,
+  "keywords": [
+    "動態記憶體管理",
+    "配置與釋放",
+    "realloc 正確用法",
+    "Memory Leak 與 Dangling Pointer",
+    "Buffer Overflow 與除錯"
+  ],
+  "sections": [
+    {
+      "title": "配置與釋放",
+      "type": "text",
+      "paragraphs": [
+        "malloc(n) 取得至少 n 位元組未初始化儲存空間；calloc 會將配置的位元組初始化為零；free 對先前配置的指標釋放儲存空間。"
+      ]
+    },
+    {
+      "title": "realloc 正確用法",
+      "type": "text",
+      "paragraphs": [
+        "realloc 可能搬移區塊，也可能失敗；先存到暫時指標並確認成功，再覆寫原指標，以免失去原區塊的參考。"
+      ]
+    },
+    {
+      "title": "Memory Leak 與 Dangling Pointer",
+      "type": "text",
+      "paragraphs": [
+        "失去所有指向有效配置區塊的參考會形成 leak；free 後再次透過舊指標存取會造成未定義行為。"
+      ]
+    },
+    {
+      "title": "Buffer Overflow 與除錯",
+      "type": "text",
+      "paragraphs": [
+        "存取超過陣列有效範圍屬未定義行為。搭配編譯器警告與 AddressSanitizer 可協助偵測部分錯誤，仍需確認邏輯正確。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "int *p=malloc(4*sizeof *p); 若 p 非 NULL，可使用 p[0] 到 p[3]；使用完後 free(p)，不要再解參考舊值。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    },
+    {
+      "title": "陣列配置記憶體大小：互動計算",
+      "type": "formula",
+      "formula": "需求位元組 = 元素數量 × sizeof(單一元素)。",
+      "details": [
+        "避免溢位與超出可配置範圍",
+        "計算僅估算 payload，不包括 allocator metadata。"
+      ],
+      "calculator": "allocation"
+    }
+  ],
+  "takeaways": [
+    "malloc(n) 取得至少 n 位元組未初始化儲存空間；calloc 會將配置的位元組初始化為零；free 對先前配置的指標釋放儲存空間。",
+    "realloc 可能搬移區塊，也可能失敗；先存到暫時指標並確認成功，再覆寫原指標，以免失去原區塊的參考。",
+    "失去所有指向有效配置區塊的參考會形成 leak；free 後再次透過舊指標存取會造成未定義行為。",
+    "存取超過陣列有效範圍屬未定義行為。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「配置與釋放」，下列何者最合理？",
+      "choices": [
+        "malloc(n) 取得至少 n 位元組未初始化儲存空間。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "malloc(n) 取得至少 n 位元組未初始化儲存空間；calloc 會將配置的位元組初始化為零；free 對先前配置的指標釋放儲存空間。"
+    }
+  ],
+  "references": [
+    {
+      "title": "cppreference：C language",
+      "url": "https://en.cppreference.com/w/c/language"
+    }
+  ]
+}

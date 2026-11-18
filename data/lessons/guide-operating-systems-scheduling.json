@@ -1,0 +1,98 @@
+{
+  "id": "guide-operating-systems-scheduling",
+  "category": "operating-systems",
+  "subcategory": "scheduling",
+  "title": "CPU 排程：FCFS、SJF、SRTF、RR",
+  "summary": "涵蓋CPU 排程的重要概念、條件、實例及自我檢測。",
+  "difficulty": "intermediate",
+  "minutes": 15,
+  "keywords": [
+    "CPU 排程",
+    "排程指標",
+    "FCFS",
+    "SJF / SRTF",
+    "Round Robin",
+    "優先權與飢餓"
+  ],
+  "sections": [
+    {
+      "title": "排程指標",
+      "type": "text",
+      "paragraphs": [
+        "Turnaround = Completion − Arrival；Waiting = Turnaround − Burst（單段 CPU burst 的簡化模型）；Response = First Run − Arrival。"
+      ]
+    },
+    {
+      "title": "FCFS",
+      "type": "text",
+      "paragraphs": [
+        "First Come First Served 依到達順序服務；實作容易，但長工作可能導致 convoy effect。"
+      ]
+    },
+    {
+      "title": "SJF / SRTF",
+      "type": "text",
+      "paragraphs": [
+        "SJF 選最短預估 CPU burst；SRTF 可搶先，選剩餘時間最短者。需要知道或估計工作長度。"
+      ]
+    },
+    {
+      "title": "Round Robin",
+      "type": "text",
+      "paragraphs": [
+        "每個執行者取得時間片 Quantum；時間片太小會增加切換成本，太大則可能近似 FCFS。"
+      ]
+    },
+    {
+      "title": "優先權與飢餓",
+      "type": "text",
+      "paragraphs": [
+        "Priority Scheduling 可能造成低優先權程序長時間未執行；Aging 是常見緩解策略。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "全部同時到達、Burst 為 P1=5、P2=3 的 FCFS，P1 等待 0，P2 等待 5，平均等待 2.5 個時間單位。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    },
+    {
+      "title": "FCFS 平均等待時間：互動計算",
+      "type": "formula",
+      "formula": "對所有工作同時到達且不搶先的 FCFS，等待時間等於前面所有工作的 Burst Time 加總。",
+      "details": [
+        "輸入 P1、P2、P3 的執行時間",
+        "依固定順序計算等待與平均等待時間",
+        "簡化條件：所有到達時間 = 0，忽略切換成本。"
+      ],
+      "calculator": "schedule"
+    }
+  ],
+  "takeaways": [
+    "Turnaround = Completion − Arrival；Waiting = Turnaround − Burst（單段 CPU burst 的簡化模型）；Response = First Run − Arrival。",
+    "First Come First Served 依到達順序服務；實作容易，但長工作可能導致 convoy effect。",
+    "SJF 選最短預估 CPU burst；SRTF 可搶先，選剩餘時間最短者。",
+    "每個執行者取得時間片 Quantum；時間片太小會增加切換成本，太大則可能近似 FCFS。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「排程指標」，下列何者最合理？",
+      "choices": [
+        "Turnaround = Completion − Arrival。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "Turnaround = Completion − Arrival；Waiting = Turnaround − Burst（單段 CPU burst 的簡化模型）；Response = First Run − Arrival。"
+    }
+  ],
+  "references": [
+    {
+      "title": "Operating Systems: Three Easy Pieces",
+      "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/"
+    }
+  ]
+}

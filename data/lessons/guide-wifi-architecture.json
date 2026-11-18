@@ -1,0 +1,101 @@
+{
+  "id": "guide-wifi-architecture",
+  "category": "wifi",
+  "subcategory": "architecture",
+  "title": "Wi-Fi 架構：STA、AP、BSS、頻道與 CSMA/CA",
+  "summary": "涵蓋Wi-Fi 基本架構的重要概念、條件、實例及自我檢測。",
+  "difficulty": "beginner",
+  "minutes": 15,
+  "keywords": [
+    "Wi-Fi 基本架構",
+    "AP、STA、BSS、ESS",
+    "SSID、BSSID",
+    "頻段與頻寬",
+    "Association 流程",
+    "CSMA/CA 與 Airtime"
+  ],
+  "sections": [
+    {
+      "title": "AP、STA、BSS、ESS",
+      "type": "text",
+      "paragraphs": [
+        "AP 提供無線接入；STA 是無線站台；BSS 是基本服務集合，ESS 可讓多個 BSS 提供同一個邏輯網路。"
+      ]
+    },
+    {
+      "title": "SSID、BSSID",
+      "type": "text",
+      "paragraphs": [
+        "SSID 是網路名稱，不保證唯一；BSSID 通常識別一個 BSS 的無線介面/位址。"
+      ]
+    },
+    {
+      "title": "頻段與頻寬",
+      "type": "text",
+      "paragraphs": [
+        "2.4、5、6 GHz 的可用頻道、功率與法規依國家而異。頻寬變大能增加峰值速率，但更容易遇到干擾或頻譜限制。"
+      ]
+    },
+    {
+      "title": "Association 流程",
+      "type": "text",
+      "paragraphs": [
+        "掃描與選擇 BSS 後，裝置按安全機制完成驗證、關聯等程序；WPA3 驗證與 802.11 關聯是不同層面的步驟。"
+      ]
+    },
+    {
+      "title": "CSMA/CA 與 Airtime",
+      "type": "text",
+      "paragraphs": [
+        "裝置競爭媒介、退避、確認與重傳都會消耗 airtime；PHY 速率提高不代表應用 Throughput 等比例提高。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "同一個 SSID 可以在教室內由不同 AP 提供，但 BSSID 不同，Client 漫遊時可能切換 AP。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    },
+    {
+      "title": "封包傳輸 airtime 理想值：互動計算",
+      "type": "formula",
+      "formula": "傳輸時間 ms = Payload_kbit / PHY_Mbps；這只是 payload 位元在給定速率上的序列化時間。",
+      "details": [
+        "忽略前導碼、MAC header、ACK、IFS、重傳與媒介競爭",
+        "並非完整 Wi-Fi 傳輸時間。"
+      ],
+      "calculator": "wifi-airtime"
+    }
+  ],
+  "takeaways": [
+    "AP 提供無線接入；STA 是無線站台；BSS 是基本服務集合，ESS 可讓多個 BSS 提供同一個邏輯網路。",
+    "SSID 是網路名稱，不保證唯一；BSSID 通常識別一個 BSS 的無線介面/位址。",
+    "2.4、5、6 GHz 的可用頻道、功率與法規依國家而異。",
+    "掃描與選擇 BSS 後，裝置按安全機制完成驗證、關聯等程序；WPA3 驗證與 802.11 關聯是不同層面的步驟。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「AP、STA、BSS、ESS」，下列何者最合理？",
+      "choices": [
+        "AP 提供無線接入。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "AP 提供無線接入；STA 是無線站台；BSS 是基本服務集合，ESS 可讓多個 BSS 提供同一個邏輯網路。"
+    }
+  ],
+  "references": [
+    {
+      "title": "Wi-Fi Alliance：Wi-Fi CERTIFIED 7",
+      "url": "https://www.wi-fi.org/discover-wi-fi/wi-fi-certified-7"
+    },
+    {
+      "title": "IEEE 802.11 標準工作組",
+      "url": "https://www.ieee802.org/11/"
+    }
+  ]
+}

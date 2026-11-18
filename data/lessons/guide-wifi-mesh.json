@@ -1,0 +1,101 @@
+{
+  "id": "guide-wifi-mesh",
+  "category": "wifi",
+  "subcategory": "mesh",
+  "title": "Mesh：Gateway、Backhaul、拓樸與 AP 部署",
+  "summary": "涵蓋Mesh 網路與部署的重要概念、條件、實例及自我檢測。",
+  "difficulty": "advanced",
+  "minutes": 15,
+  "keywords": [
+    "Mesh 網路與部署",
+    "Mesh 與 Infrastructure",
+    "Access 與 Backhaul",
+    "Gateway 可達性",
+    "SINR 與容量瓶頸",
+    "Heatmap 與 AP Placement"
+  ],
+  "sections": [
+    {
+      "title": "Mesh 與 Infrastructure",
+      "type": "text",
+      "paragraphs": [
+        "Infrastructure WLAN 通常由 AP 接入有線網路；Mesh 可利用 AP 間無線 Backhaul 多跳連到 Gateway。"
+      ]
+    },
+    {
+      "title": "Access 與 Backhaul",
+      "type": "text",
+      "paragraphs": [
+        "Access 是 AP 對 Client 的服務鏈路；Backhaul 是 AP 對上游 AP/Gateway 的中繼鏈路，頻段可能共用或分離。"
+      ]
+    },
+    {
+      "title": "Gateway 可達性",
+      "type": "text",
+      "paragraphs": [
+        "每個 Mesh AP 必須沿可行邊找到 Gateway；單看 Client 接收訊號強度無法判斷 AP 是否有可用回程。"
+      ]
+    },
+    {
+      "title": "SINR 與容量瓶頸",
+      "type": "text",
+      "paragraphs": [
+        "可使用 Mesh Link SINR 門檻初步判定是否可連通；但路徑吞吐量需要 MCS、airtime、半雙工與干擾模型。"
+      ]
+    },
+    {
+      "title": "Heatmap 與 AP Placement",
+      "type": "text",
+      "paragraphs": [
+        "以不同 AP 位置模擬 RSSI/SINR 熱力圖，定義 Coverage、Connectivity、需求滿足率，再搜尋部署位置。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "Gateway→AP1→AP2 的 Backhaul 若中間 AP1→AP2 不達 SINR 門檻，AP2 就不應被視為 Gateway 可達。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    },
+    {
+      "title": "Mesh 最低 Backhaul 瓶頸容量：互動計算",
+      "type": "formula",
+      "formula": "瓶頸容量 = min(C1,C2,C3)，不包括多跳共頻媒介競爭。",
+      "details": [
+        "需確保 Gateway 可達",
+        "限制為理想鏈路容量上界。"
+      ],
+      "calculator": "backhaul"
+    }
+  ],
+  "takeaways": [
+    "Infrastructure WLAN 通常由 AP 接入有線網路；Mesh 可利用 AP 間無線 Backhaul 多跳連到 Gateway。",
+    "Access 是 AP 對 Client 的服務鏈路；Backhaul 是 AP 對上游 AP/Gateway 的中繼鏈路，頻段可能共用或分離。",
+    "每個 Mesh AP 必須沿可行邊找到 Gateway；單看 Client 接收訊號強度無法判斷 AP 是否有可用回程。",
+    "可使用 Mesh Link SINR 門檻初步判定是否可連通；但路徑吞吐量需要 MCS、airtime、半雙工與干擾模型。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「Mesh 與 Infrastructure」，下列何者最合理？",
+      "choices": [
+        "Infrastructure WLAN 通常由 AP 接入有線網路。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "Infrastructure WLAN 通常由 AP 接入有線網路；Mesh 可利用 AP 間無線 Backhaul 多跳連到 Gateway。"
+    }
+  ],
+  "references": [
+    {
+      "title": "Wi-Fi Alliance：Wi-Fi CERTIFIED 7",
+      "url": "https://www.wi-fi.org/discover-wi-fi/wi-fi-certified-7"
+    },
+    {
+      "title": "IEEE 802.11 標準工作組",
+      "url": "https://www.ieee802.org/11/"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "id": "guide-algorithms-strategies",
+  "category": "algorithms",
+  "subcategory": "strategies",
+  "title": "分治、貪婪、動態規劃與回溯",
+  "summary": "涵蓋演算法設計策略的重要概念、條件、實例及自我檢測。",
+  "difficulty": "intermediate",
+  "minutes": 12,
+  "keywords": [
+    "演算法設計策略",
+    "Divide and Conquer",
+    "Greedy",
+    "Dynamic Programming",
+    "Backtracking 與 Branch and Bound"
+  ],
+  "sections": [
+    {
+      "title": "Divide and Conquer",
+      "type": "text",
+      "paragraphs": [
+        "將問題拆成較小、同類問題，分別求解後合併。Merge Sort 正是典型分治案例。"
+      ]
+    },
+    {
+      "title": "Greedy",
+      "type": "text",
+      "paragraphs": [
+        "每一步選擇當下看似最佳的選項；只有符合貪婪選擇性質的問題才保證全域最佳。"
+      ]
+    },
+    {
+      "title": "Dynamic Programming",
+      "type": "text",
+      "paragraphs": [
+        "當問題具有重疊子問題與最優子結構，可透過記憶化或表格逐步保存子問題答案。"
+      ]
+    },
+    {
+      "title": "Backtracking 與 Branch and Bound",
+      "type": "text",
+      "paragraphs": [
+        "回溯法列舉候選解並在違反條件時撤回；Branch and Bound 用可證明的上下界剪枝最佳化搜尋。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "找零問題在某些硬幣面額下，永遠優先挑最大面額不一定得到硬幣數最少的解。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    }
+  ],
+  "takeaways": [
+    "將問題拆成較小、同類問題，分別求解後合併。",
+    "每一步選擇當下看似最佳的選項；只有符合貪婪選擇性質的問題才保證全域最佳。",
+    "當問題具有重疊子問題與最優子結構，可透過記憶化或表格逐步保存子問題答案。",
+    "回溯法列舉候選解並在違反條件時撤回；Branch and Bound 用可證明的上下界剪枝最佳化搜尋。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「Divide and Conquer」，下列何者最合理？",
+      "choices": [
+        "將問題拆成較小、同類問題，分別求解後合併。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "將問題拆成較小、同類問題，分別求解後合併。Merge Sort 正是典型分治案例。"
+    }
+  ],
+  "references": [
+    {
+      "title": "MIT OpenCourseWare 6.006",
+      "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/"
+    }
+  ]
+}

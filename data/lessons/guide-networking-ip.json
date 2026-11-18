@@ -1,0 +1,98 @@
+{
+  "id": "guide-networking-ip",
+  "category": "networking",
+  "subcategory": "ip",
+  "title": "IPv4、CIDR、Subnet、NAT、DHCP",
+  "summary": "涵蓋IP 與子網路的重要概念、條件、實例及自我檢測。",
+  "difficulty": "intermediate",
+  "minutes": 15,
+  "keywords": [
+    "IP 與子網路",
+    "IPv4 與 Prefix",
+    "CIDR 計算",
+    "NAT / PAT",
+    "DHCP",
+    "IPv6"
+  ],
+  "sections": [
+    {
+      "title": "IPv4 與 Prefix",
+      "type": "text",
+      "paragraphs": [
+        "IPv4 共 32 bit，/24 代表前 24 bit 是網路前綴，剩 8 bit 為主機位元。網路位址與廣播位址是傳統子網路的重要概念。"
+      ]
+    },
+    {
+      "title": "CIDR 計算",
+      "type": "text",
+      "paragraphs": [
+        "/25 有 128 個位址，典型一般子網路可分配主機位址 126 個；/31 點對點與 /32 單點有特殊用途，不能套一般減 2。"
+      ]
+    },
+    {
+      "title": "NAT / PAT",
+      "type": "text",
+      "paragraphs": [
+        "NAT 轉換網路位址，PAT 常同時轉換來源連接埠讓多台內部裝置共用外部位址。"
+      ]
+    },
+    {
+      "title": "DHCP",
+      "type": "text",
+      "paragraphs": [
+        "DHCP 自動提供位址、遮罩、閘道與 DNS 等參數；若 DNS 配錯，可能能 ping IP 但無法解析網域名稱。"
+      ]
+    },
+    {
+      "title": "IPv6",
+      "type": "text",
+      "paragraphs": [
+        "IPv6 使用 128-bit 位址，常用 /64 子網路；沒有 IPv4 式廣播，採 multicast 等方式。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "192.168.1.130/26 的網段是 192.168.1.128/26，傳統可用主機位址為 .129～.190。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    },
+    {
+      "title": "CIDR 子網路位址與主機數：互動計算",
+      "type": "formula",
+      "formula": "prefix = 前綴位元數（IPv4）；網段位址以 bitwise AND 計算；主機數需注意 /31、/32 特例。",
+      "details": [
+        "Prefix 長度 0–32",
+        "普通網段 /0–/30 典型主機數為 2^(32-prefix)-2",
+        "/31 點對點和 /32 單位址不能套減 2。"
+      ],
+      "calculator": "cidr"
+    }
+  ],
+  "takeaways": [
+    "IPv4 共 32 bit，/24 代表前 24 bit 是網路前綴，剩 8 bit 為主機位元。",
+    "/25 有 128 個位址，典型一般子網路可分配主機位址 126 個；/31 點對點與 /32 單點有特殊用途，不能套一般減 2。",
+    "NAT 轉換網路位址，PAT 常同時轉換來源連接埠讓多台內部裝置共用外部位址。",
+    "DHCP 自動提供位址、遮罩、閘道與 DNS 等參數；若 DNS 配錯，可能能 ping IP 但無法解析網域名稱。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「IPv4 與 Prefix」，下列何者最合理？",
+      "choices": [
+        "IPv4 共 32 bit，/24 代表前 24 bit 是網路前綴，剩 8 bit 為主機位元。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "IPv4 共 32 bit，/24 代表前 24 bit 是網路前綴，剩 8 bit 為主機位元。網路位址與廣播位址是傳統子網路的重要概念。"
+    }
+  ],
+  "references": [
+    {
+      "title": "IETF RFC Editor",
+      "url": "https://www.rfc-editor.org/"
+    }
+  ]
+}

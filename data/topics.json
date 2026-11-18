@@ -120,5 +120,585 @@
       "OFDMA",
       "MLO"
     ]
+  },
+  {
+    "id": "guide-data-structures-basics",
+    "category": "data-structures",
+    "subcategory": "basics",
+    "title": "資料結構入門：ADT、操作成本與選型",
+    "summary": "涵蓋資料結構基礎的重要概念、條件、實例及自我檢測。",
+    "difficulty": "beginner",
+    "minutes": 12,
+    "keywords": [
+      "資料結構基礎",
+      "資料結構與 ADT",
+      "連續與非連續儲存",
+      "時間複雜度怎麼看",
+      "選擇資料結構的流程"
+    ]
+  },
+  {
+    "id": "guide-data-structures-linear",
+    "category": "data-structures",
+    "subcategory": "linear",
+    "title": "Array、Linked List、Stack、Queue 總覽",
+    "summary": "涵蓋線性資料結構的重要概念、條件、實例及自我檢測。",
+    "difficulty": "beginner",
+    "minutes": 12,
+    "keywords": [
+      "線性資料結構",
+      "陣列 Array",
+      "鏈結串列 Linked List",
+      "Stack 與 Queue",
+      "循環佇列與 Deque"
+    ]
+  },
+  {
+    "id": "guide-data-structures-trees",
+    "category": "data-structures",
+    "subcategory": "trees",
+    "title": "樹狀結構：BST、AVL、Heap、B-Tree、Trie",
+    "summary": "涵蓋樹狀資料結構的重要概念、條件、實例及自我檢測。",
+    "difficulty": "intermediate",
+    "minutes": 15,
+    "keywords": [
+      "樹狀資料結構",
+      "樹與走訪",
+      "BST 與 AVL",
+      "Heap 與優先佇列",
+      "B-Tree 與 B+ Tree",
+      "Trie 前綴樹"
+    ]
+  },
+  {
+    "id": "guide-data-structures-graphs",
+    "category": "data-structures",
+    "subcategory": "graphs",
+    "title": "Graph：節點、邊與表示方法",
+    "summary": "涵蓋圖形資料結構的重要概念、條件、實例及自我檢測。",
+    "difficulty": "beginner",
+    "minutes": 15,
+    "keywords": [
+      "圖形資料結構",
+      "圖的基本模型",
+      "加權與無權",
+      "鄰接矩陣",
+      "鄰接串列",
+      "網路拓樸應用"
+    ]
+  },
+  {
+    "id": "guide-data-structures-hashing",
+    "category": "data-structures",
+    "subcategory": "hashing",
+    "title": "Hash Table、Collision 與 Union-Find",
+    "summary": "涵蓋雜湊與集合的重要概念、條件、實例及自我檢測。",
+    "difficulty": "intermediate",
+    "minutes": 12,
+    "keywords": [
+      "雜湊與集合",
+      "雜湊表原理",
+      "碰撞處理",
+      "Set 與 Map",
+      "Union-Find"
+    ]
+  },
+  {
+    "id": "guide-programming-c-basics",
+    "category": "programming",
+    "subcategory": "c-basics",
+    "title": "C 語言基礎：型別、流程、函式與結構體",
+    "summary": "涵蓋C 語言基礎的重要概念、條件、實例及自我檢測。",
+    "difficulty": "beginner",
+    "minutes": 15,
+    "keywords": [
+      "C 語言基礎",
+      "資料型別與運算",
+      "條件判斷與迴圈",
+      "函式與傳值",
+      "陣列與字串",
+      "struct、union、enum"
+    ]
+  },
+  {
+    "id": "guide-programming-memory",
+    "category": "programming",
+    "subcategory": "memory",
+    "title": "C 記憶體區段與變數生命週期",
+    "summary": "涵蓋記憶體與位址的重要概念、條件、實例及自我檢測。",
+    "difficulty": "intermediate",
+    "minutes": 12,
+    "keywords": [
+      "記憶體與位址",
+      "記憶體區段",
+      "儲存期",
+      "位址與對齊",
+      "大小端序"
+    ]
+  },
+  {
+    "id": "guide-programming-pointers",
+    "category": "programming",
+    "subcategory": "pointers",
+    "title": "C 指標：位址、解參考與陣列",
+    "summary": "涵蓋指標技術的重要概念、條件、實例及自我檢測。",
+    "difficulty": "intermediate",
+    "minutes": 12,
+    "keywords": [
+      "指標技術",
+      "取址與解參考",
+      "陣列與指標運算",
+      "雙重指標",
+      "const 與函式指標"
+    ]
+  },
+  {
+    "id": "guide-programming-dynamic-memory",
+    "category": "programming",
+    "subcategory": "dynamic-memory",
+    "title": "malloc、calloc、realloc、free 與安全性",
+    "summary": "涵蓋動態記憶體管理的重要概念、條件、實例及自我檢測。",
+    "difficulty": "intermediate",
+    "minutes": 12,
+    "keywords": [
+      "動態記憶體管理",
+      "配置與釋放",
+      "realloc 正確用法",
+      "Memory Leak 與 Dangling Pointer",
+      "Buffer Overflow 與除錯"
+    ]
+  },
+  {
+    "id": "guide-programming-tooling",
+    "category": "programming",
+    "subcategory": "tooling",
+    "title": "C 的編譯、連結與除錯工具",
+    "summary": "涵蓋程式執行與工具的重要概念、條件、實例及自我檢測。",
+    "difficulty": "beginner",
+    "minutes": 12,
+    "keywords": [
+      "程式執行與工具",
+      "從原始碼到執行檔",
+      "Header 與 Source",
+      "GCC 與警告",
+      "GDB 與 Make"
+    ]
+  },
+  {
+    "id": "guide-algorithms-analysis",
+    "category": "algorithms",
+    "subcategory": "analysis",
+    "title": "Big-O、遞迴與演算法正確性",
+    "summary": "涵蓋演算法分析的重要概念、條件、實例及自我檢測。",
+    "difficulty": "beginner",
+    "minutes": 12,
+    "keywords": [
+      "演算法分析",
+      "漸近符號",
+      "最好、平均、最壞",
+      "遞迴與堆疊",
+      "正確性證明"
+    ]
+  },
+  {
+    "id": "guide-algorithms-search",
+    "category": "algorithms",
+    "subcategory": "search",
+    "title": "線性搜尋、二分搜尋與雜湊查找",
+    "summary": "涵蓋搜尋演算法的重要概念、條件、實例及自我檢測。",
+    "difficulty": "beginner",
+    "minutes": 12,
+    "keywords": [
+      "搜尋演算法",
+      "Linear Search",
+      "Binary Search",
+      "Hash Search",
+      "BST Search"
+    ]
+  },
+  {
+    "id": "guide-algorithms-sort",
+    "category": "algorithms",
+    "subcategory": "sort",
+    "title": "排序總覽：Bubble、Merge、Quick、Heap",
+    "summary": "涵蓋排序演算法的重要概念、條件、實例及自我檢測。",
+    "difficulty": "intermediate",
+    "minutes": 15,
+    "keywords": [
+      "排序演算法",
+      "基礎比較排序",
+      "Merge Sort",
+      "Quick Sort",
+      "Heap Sort",
+      "非比較排序"
+    ]
+  },
+  {
+    "id": "guide-algorithms-strategies",
+    "category": "algorithms",
+    "subcategory": "strategies",
+    "title": "分治、貪婪、動態規劃與回溯",
+    "summary": "涵蓋演算法設計策略的重要概念、條件、實例及自我檢測。",
+    "difficulty": "intermediate",
+    "minutes": 12,
+    "keywords": [
+      "演算法設計策略",
+      "Divide and Conquer",
+      "Greedy",
+      "Dynamic Programming",
+      "Backtracking 與 Branch and Bound"
+    ]
+  },
+  {
+    "id": "guide-algorithms-graph-algorithms",
+    "category": "algorithms",
+    "subcategory": "graph-algorithms",
+    "title": "BFS、DFS、Dijkstra 與最小生成樹",
+    "summary": "涵蓋圖論演算法的重要概念、條件、實例及自我檢測。",
+    "difficulty": "intermediate",
+    "minutes": 12,
+    "keywords": [
+      "圖論演算法",
+      "BFS 與 DFS",
+      "Dijkstra",
+      "Bellman-Ford 與 Floyd-Warshall",
+      "MST 與拓樸排序"
+    ]
+  },
+  {
+    "id": "guide-algorithms-optimization",
+    "category": "algorithms",
+    "subcategory": "optimization",
+    "title": "最佳化、A*、Q-learning 與 DQN",
+    "summary": "涵蓋最佳化與進階演算法的重要概念、條件、實例及自我檢測。",
+    "difficulty": "advanced",
+    "minutes": 15,
+    "keywords": [
+      "最佳化與進階演算法",
+      "數學最佳化",
+      "A* 搜尋",
+      "Q-learning",
+      "DQN",
+      "應用到 AP Placement"
+    ]
+  },
+  {
+    "id": "guide-operating-systems-os-basics",
+    "category": "operating-systems",
+    "subcategory": "os-basics",
+    "title": "Kernel、System Call、中斷與切換",
+    "summary": "涵蓋OS 核心基礎的重要概念、條件、實例及自我檢測。",
+    "difficulty": "beginner",
+    "minutes": 12,
+    "keywords": [
+      "OS 核心基礎",
+      "Kernel 與 User Space",
+      "System Call",
+      "Interrupt 與 Exception",
+      "Context Switch"
+    ]
+  },
+  {
+    "id": "guide-operating-systems-processes",
+    "category": "operating-systems",
+    "subcategory": "processes",
+    "title": "程序狀態、PCB、IPC 與多執行緒",
+    "summary": "涵蓋程序與執行緒的重要概念、條件、實例及自我檢測。",
+    "difficulty": "beginner",
+    "minutes": 15,
+    "keywords": [
+      "程序與執行緒",
+      "程序生命週期",
+      "PCB 與排程資料",
+      "Thread 與共享",
+      "IPC",
+      "fork 與 exec"
+    ]
+  },
+  {
+    "id": "guide-operating-systems-scheduling",
+    "category": "operating-systems",
+    "subcategory": "scheduling",
+    "title": "CPU 排程：FCFS、SJF、SRTF、RR",
+    "summary": "涵蓋CPU 排程的重要概念、條件、實例及自我檢測。",
+    "difficulty": "intermediate",
+    "minutes": 15,
+    "keywords": [
+      "CPU 排程",
+      "排程指標",
+      "FCFS",
+      "SJF / SRTF",
+      "Round Robin",
+      "優先權與飢餓"
+    ]
+  },
+  {
+    "id": "guide-operating-systems-virtual-memory",
+    "category": "operating-systems",
+    "subcategory": "virtual-memory",
+    "title": "虛擬記憶體：Paging、TLB、Page Fault",
+    "summary": "涵蓋記憶體管理的重要概念、條件、實例及自我檢測。",
+    "difficulty": "intermediate",
+    "minutes": 15,
+    "keywords": [
+      "記憶體管理",
+      "Virtual Address",
+      "Paging",
+      "TLB",
+      "Page Fault",
+      "頁面置換"
+    ]
+  },
+  {
+    "id": "guide-operating-systems-synchronization",
+    "category": "operating-systems",
+    "subcategory": "synchronization",
+    "title": "Race Condition、Mutex、Semaphore、Deadlock",
+    "summary": "涵蓋同步與死結的重要概念、條件、實例及自我檢測。",
+    "difficulty": "intermediate",
+    "minutes": 15,
+    "keywords": [
+      "同步與死結",
+      "競態與臨界區",
+      "Mutex 與 Semaphore",
+      "Producer–Consumer",
+      "死結條件",
+      "Banker’s Algorithm"
+    ]
+  },
+  {
+    "id": "guide-operating-systems-storage",
+    "category": "operating-systems",
+    "subcategory": "storage",
+    "title": "File System、快取與磁碟 I/O",
+    "summary": "涵蓋儲存與檔案系統的重要概念、條件、實例及自我檢測。",
+    "difficulty": "beginner",
+    "minutes": 15,
+    "keywords": [
+      "儲存與檔案系統",
+      "檔案系統",
+      "File Descriptor",
+      "Disk Scheduling",
+      "Buffer 與 Cache",
+      "Container 與 VM"
+    ]
+  },
+  {
+    "id": "guide-networking-models",
+    "category": "networking",
+    "subcategory": "models",
+    "title": "OSI / TCP-IP 與封裝解封裝",
+    "summary": "涵蓋網路模型與基礎的重要概念、條件、實例及自我檢測。",
+    "difficulty": "beginner",
+    "minutes": 12,
+    "keywords": [
+      "網路模型與基礎",
+      "OSI 模型",
+      "TCP/IP 模型",
+      "封裝",
+      "延遲、抖動與丟包"
+    ]
+  },
+  {
+    "id": "guide-networking-lan",
+    "category": "networking",
+    "subcategory": "lan",
+    "title": "Ethernet、MAC、ARP 與 VLAN",
+    "summary": "涵蓋資料鏈結與區域網路的重要概念、條件、實例及自我檢測。",
+    "difficulty": "beginner",
+    "minutes": 12,
+    "keywords": [
+      "資料鏈結與區域網路",
+      "MAC 與 Ethernet",
+      "ARP 與 IPv4",
+      "VLAN",
+      "碰撞域與廣播域"
+    ]
+  },
+  {
+    "id": "guide-networking-ip",
+    "category": "networking",
+    "subcategory": "ip",
+    "title": "IPv4、CIDR、Subnet、NAT、DHCP",
+    "summary": "涵蓋IP 與子網路的重要概念、條件、實例及自我檢測。",
+    "difficulty": "intermediate",
+    "minutes": 15,
+    "keywords": [
+      "IP 與子網路",
+      "IPv4 與 Prefix",
+      "CIDR 計算",
+      "NAT / PAT",
+      "DHCP",
+      "IPv6"
+    ]
+  },
+  {
+    "id": "guide-networking-transport",
+    "category": "networking",
+    "subcategory": "transport",
+    "title": "TCP、UDP 與可靠傳輸",
+    "summary": "涵蓋傳輸層與可靠性的重要概念、條件、實例及自我檢測。",
+    "difficulty": "intermediate",
+    "minutes": 15,
+    "keywords": [
+      "傳輸層與可靠性",
+      "TCP 建立與結束",
+      "可靠性與流控",
+      "Congestion Control",
+      "UDP",
+      "Port 與 Socket"
+    ]
+  },
+  {
+    "id": "guide-networking-routing",
+    "category": "networking",
+    "subcategory": "routing",
+    "title": "Routing Table、Static Route、OSPF、BGP",
+    "summary": "涵蓋路由與網際網路的重要概念、條件、實例及自我檢測。",
+    "difficulty": "intermediate",
+    "minutes": 15,
+    "keywords": [
+      "路由與網際網路",
+      "Router 與 Default Gateway",
+      "Longest Prefix Match",
+      "Static 與 Dynamic Routing",
+      "Distance Vector 與 Link State",
+      "TTL / Hop Limit"
+    ]
+  },
+  {
+    "id": "guide-networking-application",
+    "category": "networking",
+    "subcategory": "application",
+    "title": "DNS、HTTP/HTTPS、TLS 與 Ping 排錯",
+    "summary": "涵蓋應用層與網路診斷的重要概念、條件、實例及自我檢測。",
+    "difficulty": "beginner",
+    "minutes": 15,
+    "keywords": [
+      "應用層與網路診斷",
+      "DNS 解讀",
+      "HTTP 與 HTTPS",
+      "TLS",
+      "Ping / ICMP",
+      "排錯順序"
+    ]
+  },
+  {
+    "id": "guide-wifi-architecture",
+    "category": "wifi",
+    "subcategory": "architecture",
+    "title": "Wi-Fi 架構：STA、AP、BSS、頻道與 CSMA/CA",
+    "summary": "涵蓋Wi-Fi 基本架構的重要概念、條件、實例及自我檢測。",
+    "difficulty": "beginner",
+    "minutes": 15,
+    "keywords": [
+      "Wi-Fi 基本架構",
+      "AP、STA、BSS、ESS",
+      "SSID、BSSID",
+      "頻段與頻寬",
+      "Association 流程",
+      "CSMA/CA 與 Airtime"
+    ]
+  },
+  {
+    "id": "guide-wifi-wireless-signal",
+    "category": "wifi",
+    "subcategory": "wireless-signal",
+    "title": "無線訊號：FSPL、RSSI、SNR、SINR",
+    "summary": "涵蓋無線傳播與訊號品質的重要概念、條件、實例及自我檢測。",
+    "difficulty": "intermediate",
+    "minutes": 12,
+    "keywords": [
+      "無線傳播與訊號品質",
+      "dB 與 dBm",
+      "路徑損耗",
+      "雜訊與 SNR",
+      "干擾與 SINR"
+    ]
+  },
+  {
+    "id": "guide-wifi-phy-mac",
+    "category": "wifi",
+    "subcategory": "phy-mac",
+    "title": "Wi-Fi PHY/MAC：OFDM、OFDMA、RU、MIMO、MCS",
+    "summary": "涵蓋Wi-Fi PHY / MAC 技術的重要概念、條件、實例及自我檢測。",
+    "difficulty": "advanced",
+    "minutes": 15,
+    "keywords": [
+      "Wi-Fi PHY / MAC 技術",
+      "OFDM 與 OFDMA",
+      "RU 與子載波",
+      "MIMO 與 Beamforming",
+      "QAM、Coding 與 MCS",
+      "Guard Interval 與 PHY Rate"
+    ]
+  },
+  {
+    "id": "guide-wifi-capacity",
+    "category": "wifi",
+    "subcategory": "capacity",
+    "title": "Wi-Fi 容量：PHY、Airtime、Backhaul 瓶頸",
+    "summary": "涵蓋Throughput 與容量模型的重要概念、條件、實例及自我檢測。",
+    "difficulty": "advanced",
+    "minutes": 15,
+    "keywords": [
+      "Throughput 與容量模型",
+      "三種速率不要混淆",
+      "Shannon 上界",
+      "Airtime 分享",
+      "Backhaul 多跳",
+      "Demand Satisfaction"
+    ]
+  },
+  {
+    "id": "guide-wifi-generations",
+    "category": "wifi",
+    "subcategory": "generations",
+    "title": "Wi-Fi 4/5/6/6E/7 核心差異",
+    "summary": "涵蓋Wi-Fi 世代比較的重要概念、條件、實例及自我檢測。",
+    "difficulty": "intermediate",
+    "minutes": 15,
+    "keywords": [
+      "Wi-Fi 世代比較",
+      "Wi-Fi 4 / 5",
+      "Wi-Fi 6",
+      "Wi-Fi 6E",
+      "Wi-Fi 7",
+      "不等於一定最快"
+    ]
+  },
+  {
+    "id": "guide-wifi-mesh",
+    "category": "wifi",
+    "subcategory": "mesh",
+    "title": "Mesh：Gateway、Backhaul、拓樸與 AP 部署",
+    "summary": "涵蓋Mesh 網路與部署的重要概念、條件、實例及自我檢測。",
+    "difficulty": "advanced",
+    "minutes": 15,
+    "keywords": [
+      "Mesh 網路與部署",
+      "Mesh 與 Infrastructure",
+      "Access 與 Backhaul",
+      "Gateway 可達性",
+      "SINR 與容量瓶頸",
+      "Heatmap 與 AP Placement"
+    ]
+  },
+  {
+    "id": "guide-wifi-ai-optimization",
+    "category": "wifi",
+    "subcategory": "ai-optimization",
+    "title": "無線網路最佳化：CNN、GNN、DRL",
+    "summary": "涵蓋無線網路最佳化與 AI的重要概念、條件、實例及自我檢測。",
+    "difficulty": "advanced",
+    "minutes": 15,
+    "keywords": [
+      "無線網路最佳化與 AI",
+      "狀態與特徵",
+      "CNN 空間特徵",
+      "GNN 拓樸表示",
+      "DRL 動作與獎勵",
+      "評估與泛化"
+    ]
   }
 ]

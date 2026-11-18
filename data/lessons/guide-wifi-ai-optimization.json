@@ -1,0 +1,91 @@
+{
+  "id": "guide-wifi-ai-optimization",
+  "category": "wifi",
+  "subcategory": "ai-optimization",
+  "title": "無線網路最佳化：CNN、GNN、DRL",
+  "summary": "涵蓋無線網路最佳化與 AI的重要概念、條件、實例及自我檢測。",
+  "difficulty": "advanced",
+  "minutes": 15,
+  "keywords": [
+    "無線網路最佳化與 AI",
+    "狀態與特徵",
+    "CNN 空間特徵",
+    "GNN 拓樸表示",
+    "DRL 動作與獎勵",
+    "評估與泛化"
+  ],
+  "sections": [
+    {
+      "title": "狀態與特徵",
+      "type": "text",
+      "paragraphs": [
+        "把平面圖牆壁、材質、偏好區域、目前 AP 位置編成數值特徵；各欄位尺度與訓練場景應一致。"
+      ]
+    },
+    {
+      "title": "CNN 空間特徵",
+      "type": "text",
+      "paragraphs": [
+        "卷積網路能擷取鄰域空間模式，適合牆壁圖、熱力圖等網格資料，但不代表單靠 CNN 就能解決所有網路約束。"
+      ]
+    },
+    {
+      "title": "GNN 拓樸表示",
+      "type": "text",
+      "paragraphs": [
+        "將 Gateway、AP、Client 建成節點，連線與 SINR/容量當作邊特徵；GNN 擅長聚合鄰居拓樸資訊。"
+      ]
+    },
+    {
+      "title": "DRL 動作與獎勵",
+      "type": "text",
+      "paragraphs": [
+        "強化學習定義移動/新增 AP 的動作與獎勵；可將覆蓋率、連通率、吞吐需求與 AP 數量組成加權目標。"
+      ]
+    },
+    {
+      "title": "評估與泛化",
+      "type": "text",
+      "paragraphs": [
+        "訓練與測試地圖要分開，與傳統啟發式方法比較；報告需註明 SINR 到速率的假設、回程資源及未模擬效應。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "若所有 Client 都有良好 RSSI，但某些 AP 無法回到 Gateway，最佳化獎勵必須加入 Connectivity，否則可能選出無法服務的部署。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    }
+  ],
+  "takeaways": [
+    "把平面圖牆壁、材質、偏好區域、目前 AP 位置編成數值特徵；各欄位尺度與訓練場景應一致。",
+    "卷積網路能擷取鄰域空間模式，適合牆壁圖、熱力圖等網格資料，但不代表單靠 CNN 就能解決所有網路約束。",
+    "將 Gateway、AP、Client 建成節點，連線與 SINR/容量當作邊特徵；GNN 擅長聚合鄰居拓樸資訊。",
+    "強化學習定義移動/新增 AP 的動作與獎勵；可將覆蓋率、連通率、吞吐需求與 AP 數量組成加權目標。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「狀態與特徵」，下列何者最合理？",
+      "choices": [
+        "把平面圖牆壁、材質、偏好區域、目前 AP 位置編成數值特徵。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "把平面圖牆壁、材質、偏好區域、目前 AP 位置編成數值特徵；各欄位尺度與訓練場景應一致。"
+    }
+  ],
+  "references": [
+    {
+      "title": "Wi-Fi Alliance：Wi-Fi CERTIFIED 7",
+      "url": "https://www.wi-fi.org/discover-wi-fi/wi-fi-certified-7"
+    },
+    {
+      "title": "IEEE 802.11 標準工作組",
+      "url": "https://www.ieee802.org/11/"
+    }
+  ]
+}

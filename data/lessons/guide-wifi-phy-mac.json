@@ -1,0 +1,101 @@
+{
+  "id": "guide-wifi-phy-mac",
+  "category": "wifi",
+  "subcategory": "phy-mac",
+  "title": "Wi-Fi PHY/MAC：OFDM、OFDMA、RU、MIMO、MCS",
+  "summary": "涵蓋Wi-Fi PHY / MAC 技術的重要概念、條件、實例及自我檢測。",
+  "difficulty": "advanced",
+  "minutes": 15,
+  "keywords": [
+    "Wi-Fi PHY / MAC 技術",
+    "OFDM 與 OFDMA",
+    "RU 與子載波",
+    "MIMO 與 Beamforming",
+    "QAM、Coding 與 MCS",
+    "Guard Interval 與 PHY Rate"
+  ],
+  "sections": [
+    {
+      "title": "OFDM 與 OFDMA",
+      "type": "text",
+      "paragraphs": [
+        "OFDM 用多個互相正交的子載波承載資料；OFDMA 可把時頻資源分配給多個使用者，提升高密度場景效率。"
+      ]
+    },
+    {
+      "title": "RU 與子載波",
+      "type": "text",
+      "paragraphs": [
+        "Resource Unit（RU）由一組子載波構成；可用子載波數、資料子載波數需依 Wi-Fi 世代、頻寬、RU 大小和配置查表。"
+      ]
+    },
+    {
+      "title": "MIMO 與 Beamforming",
+      "type": "text",
+      "paragraphs": [
+        "MIMO 利用多天線空間通道，MU-MIMO 可同時服務不同使用者；Spatial Stream 數量受到環境、硬體能力等條件限制。"
+      ]
+    },
+    {
+      "title": "QAM、Coding 與 MCS",
+      "type": "text",
+      "paragraphs": [
+        "更高階 QAM 每個子載波承載更多位元，但對訊號品質要求較高。MCS 結合調變與編碼率，不能單靠 SINR 一個數值保證所用 MCS。"
+      ]
+    },
+    {
+      "title": "Guard Interval 與 PHY Rate",
+      "type": "text",
+      "paragraphs": [
+        "符號時間、GI、資料子載波數、編碼率與串流數可推得近似 PHY 速率；實際 throughput 仍需扣除 MAC 開銷與重傳。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "256-QAM 每個調變符號對應 8 個原始 bit；若編碼率 3/4，每符號平均有效資料位元須再乘 0.75。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    },
+    {
+      "title": "QAM 每符號位元數：互動計算",
+      "type": "formula",
+      "formula": "bits/symbol = log2(M)，其中 M 是 2 的冪次調變階數。",
+      "details": [
+        "調變階數如 4、16、64、256、1024、4096",
+        "編碼率與空間串流會影響最終有效資料速率。"
+      ],
+      "calculator": "qam"
+    }
+  ],
+  "takeaways": [
+    "OFDM 用多個互相正交的子載波承載資料；OFDMA 可把時頻資源分配給多個使用者，提升高密度場景效率。",
+    "Resource Unit（RU）由一組子載波構成；可用子載波數、資料子載波數需依 Wi-Fi 世代、頻寬、RU 大小和配置查表。",
+    "MIMO 利用多天線空間通道，MU-MIMO 可同時服務不同使用者；Spatial Stream 數量受到環境、硬體能力等條件限制。",
+    "更高階 QAM 每個子載波承載更多位元，但對訊號品質要求較高。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「OFDM 與 OFDMA」，下列何者最合理？",
+      "choices": [
+        "OFDM 用多個互相正交的子載波承載資料。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "OFDM 用多個互相正交的子載波承載資料；OFDMA 可把時頻資源分配給多個使用者，提升高密度場景效率。"
+    }
+  ],
+  "references": [
+    {
+      "title": "Wi-Fi Alliance：Wi-Fi CERTIFIED 7",
+      "url": "https://www.wi-fi.org/discover-wi-fi/wi-fi-certified-7"
+    },
+    {
+      "title": "IEEE 802.11 標準工作組",
+      "url": "https://www.ieee802.org/11/"
+    }
+  ]
+}

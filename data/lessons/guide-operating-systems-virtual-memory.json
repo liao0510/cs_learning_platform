@@ -1,0 +1,97 @@
+{
+  "id": "guide-operating-systems-virtual-memory",
+  "category": "operating-systems",
+  "subcategory": "virtual-memory",
+  "title": "虛擬記憶體：Paging、TLB、Page Fault",
+  "summary": "涵蓋記憶體管理的重要概念、條件、實例及自我檢測。",
+  "difficulty": "intermediate",
+  "minutes": 15,
+  "keywords": [
+    "記憶體管理",
+    "Virtual Address",
+    "Paging",
+    "TLB",
+    "Page Fault",
+    "頁面置換"
+  ],
+  "sections": [
+    {
+      "title": "Virtual Address",
+      "type": "text",
+      "paragraphs": [
+        "程序使用虛擬位址，MMU 與頁表協助轉成實體位址；不同程序可各有位址映射。"
+      ]
+    },
+    {
+      "title": "Paging",
+      "type": "text",
+      "paragraphs": [
+        "把位址空間切成固定大小頁，位址分成 Page Number 與 Offset。頁大小為 4096 Byte 時，低 12 bit 是位移。"
+      ]
+    },
+    {
+      "title": "TLB",
+      "type": "text",
+      "paragraphs": [
+        "TLB 快取最近常用的位址轉譯項目；TLB Miss 不必然等於 Page Fault。"
+      ]
+    },
+    {
+      "title": "Page Fault",
+      "type": "text",
+      "paragraphs": [
+        "存取頁不在目前有效映射或需要 OS 介入時可能產生 page fault，處理方式取決於原因。"
+      ]
+    },
+    {
+      "title": "頁面置換",
+      "type": "text",
+      "paragraphs": [
+        "FIFO、LRU、Optimal 是常見教學演算法；Thrashing 指系統忙於換頁導致有效工作進度降低。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "頁大小 4096 Byte、虛擬位址 12345，Page Number 是 3，Offset 是 57。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    },
+    {
+      "title": "Paging 位址拆分：互動計算",
+      "type": "formula",
+      "formula": "page = floor(address / pageSize)，offset = address mod pageSize。",
+      "details": [
+        "輸入非負整數虛擬位址（Byte）與頁大小（Byte）",
+        "頁大小使用 2 的次方；此處只計算拆分，不實際翻譯成實體位址。"
+      ],
+      "calculator": "paging"
+    }
+  ],
+  "takeaways": [
+    "程序使用虛擬位址，MMU 與頁表協助轉成實體位址；不同程序可各有位址映射。",
+    "把位址空間切成固定大小頁，位址分成 Page Number 與 Offset。",
+    "TLB 快取最近常用的位址轉譯項目；TLB Miss 不必然等於 Page Fault。",
+    "存取頁不在目前有效映射或需要 OS 介入時可能產生 page fault，處理方式取決於原因。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「Virtual Address」，下列何者最合理？",
+      "choices": [
+        "程序使用虛擬位址，MMU 與頁表協助轉成實體位址。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "程序使用虛擬位址，MMU 與頁表協助轉成實體位址；不同程序可各有位址映射。"
+    }
+  ],
+  "references": [
+    {
+      "title": "Operating Systems: Three Easy Pieces",
+      "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "id": "guide-networking-lan",
+  "category": "networking",
+  "subcategory": "lan",
+  "title": "Ethernet、MAC、ARP 與 VLAN",
+  "summary": "涵蓋資料鏈結與區域網路的重要概念、條件、實例及自我檢測。",
+  "difficulty": "beginner",
+  "minutes": 12,
+  "keywords": [
+    "資料鏈結與區域網路",
+    "MAC 與 Ethernet",
+    "ARP 與 IPv4",
+    "VLAN",
+    "碰撞域與廣播域"
+  ],
+  "sections": [
+    {
+      "title": "MAC 與 Ethernet",
+      "type": "text",
+      "paragraphs": [
+        "乙太網路訊框包含來源/目的 MAC、型別資訊與檢查欄位等；交換器依 MAC 位址表在鏈路層轉送訊框。"
+      ]
+    },
+    {
+      "title": "ARP 與 IPv4",
+      "type": "text",
+      "paragraphs": [
+        "ARP 在同一鏈路解析 IPv4 對應的 MAC 位址；IPv6 則使用 Neighbor Discovery，不使用 ARP。"
+      ]
+    },
+    {
+      "title": "VLAN",
+      "type": "text",
+      "paragraphs": [
+        "802.1Q 標籤可將 Layer 2 網路分成多個邏輯廣播域；跨 VLAN 通訊需要三層轉送。"
+      ]
+    },
+    {
+      "title": "碰撞域與廣播域",
+      "type": "text",
+      "paragraphs": [
+        "Switch port 通常分隔碰撞域，VLAN 分隔廣播域；廣播不會自動跨越三層路由器。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "PC 在相同 VLAN 中傳送 IPv4 封包給鄰居前，可能先用 ARP 查得目的 MAC。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    }
+  ],
+  "takeaways": [
+    "乙太網路訊框包含來源/目的 MAC、型別資訊與檢查欄位等；交換器依 MAC 位址表在鏈路層轉送訊框。",
+    "ARP 在同一鏈路解析 IPv4 對應的 MAC 位址；IPv6 則使用 Neighbor Discovery，不使用 ARP。",
+    "802.1Q 標籤可將 Layer 2 網路分成多個邏輯廣播域；跨 VLAN 通訊需要三層轉送。",
+    "Switch port 通常分隔碰撞域，VLAN 分隔廣播域；廣播不會自動跨越三層路由器。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「MAC 與 Ethernet」，下列何者最合理？",
+      "choices": [
+        "乙太網路訊框包含來源/目的 MAC、型別資訊與檢查欄位等。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "乙太網路訊框包含來源/目的 MAC、型別資訊與檢查欄位等；交換器依 MAC 位址表在鏈路層轉送訊框。"
+    }
+  ],
+  "references": [
+    {
+      "title": "IETF RFC Editor",
+      "url": "https://www.rfc-editor.org/"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "id": "guide-algorithms-search",
+  "category": "algorithms",
+  "subcategory": "search",
+  "title": "線性搜尋、二分搜尋與雜湊查找",
+  "summary": "涵蓋搜尋演算法的重要概念、條件、實例及自我檢測。",
+  "difficulty": "beginner",
+  "minutes": 12,
+  "keywords": [
+    "搜尋演算法",
+    "Linear Search",
+    "Binary Search",
+    "Hash Search",
+    "BST Search"
+  ],
+  "sections": [
+    {
+      "title": "Linear Search",
+      "type": "text",
+      "paragraphs": [
+        "從頭到尾逐一比較，不要求排序；在最壞情況需要 O(n) 次比較。"
+      ]
+    },
+    {
+      "title": "Binary Search",
+      "type": "text",
+      "paragraphs": [
+        "要求資料按比較規則排序，每次選擇中點並捨棄不可能的一半；典型時間複雜度 O(log n)。"
+      ]
+    },
+    {
+      "title": "Hash Search",
+      "type": "text",
+      "paragraphs": [
+        "Hash Table 在良好雜湊與負載下平均可接近 O(1)；極端碰撞可能使操作退化。"
+      ]
+    },
+    {
+      "title": "BST Search",
+      "type": "text",
+      "paragraphs": [
+        "平衡 BST 查找約 O(log n)；沒有平衡保證時最壞可能 O(n)。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "在 16 個已排序元素中，理想二分搜尋每次大致減半，通常只需少數幾次比較。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    },
+    {
+      "title": "逐步二分搜尋",
+      "type": "demo",
+      "demo": "binary-search"
+    }
+  ],
+  "takeaways": [
+    "從頭到尾逐一比較，不要求排序；在最壞情況需要 O(n) 次比較。",
+    "要求資料按比較規則排序，每次選擇中點並捨棄不可能的一半；典型時間複雜度 O(log n)。",
+    "Hash Table 在良好雜湊與負載下平均可接近 O(1)；極端碰撞可能使操作退化。",
+    "平衡 BST 查找約 O(log n)；沒有平衡保證時最壞可能 O(n)。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「Linear Search」，下列何者最合理？",
+      "choices": [
+        "從頭到尾逐一比較，不要求排序。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "從頭到尾逐一比較，不要求排序；在最壞情況需要 O(n) 次比較。"
+    }
+  ],
+  "references": [
+    {
+      "title": "MIT OpenCourseWare 6.006",
+      "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/"
+    }
+  ]
+}

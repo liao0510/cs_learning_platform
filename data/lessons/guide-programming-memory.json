@@ -1,0 +1,84 @@
+{
+  "id": "guide-programming-memory",
+  "category": "programming",
+  "subcategory": "memory",
+  "title": "C 記憶體區段與變數生命週期",
+  "summary": "涵蓋記憶體與位址的重要概念、條件、實例及自我檢測。",
+  "difficulty": "intermediate",
+  "minutes": 12,
+  "keywords": [
+    "記憶體與位址",
+    "記憶體區段",
+    "儲存期",
+    "位址與對齊",
+    "大小端序"
+  ],
+  "sections": [
+    {
+      "title": "記憶體區段",
+      "type": "text",
+      "paragraphs": [
+        "教學上常以 Text、Data、BSS、Heap、Stack 介紹程式位址空間，但實際區段位置、保護及成長方向依系統而定。"
+      ]
+    },
+    {
+      "title": "儲存期",
+      "type": "text",
+      "paragraphs": [
+        "區域自動變數在區塊生命週期內存在；static 與全域物件通常具有靜態儲存期；malloc 配置物件直到 free 才結束生命週期。"
+      ]
+    },
+    {
+      "title": "位址與對齊",
+      "type": "text",
+      "paragraphs": [
+        "指標儲存物件位址，sizeof 不等於指標所指資料長度；不同型別可能要求對齊，struct 也可能插入 padding。"
+      ]
+    },
+    {
+      "title": "大小端序",
+      "type": "text",
+      "paragraphs": [
+        "Big-endian 與 Little-endian 描述多位元組資料在記憶體的位元組順序，跨機器交換二進位資料時需要明確定義格式。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "對 int *p 而言，sizeof(p) 是指標物件大小，不是 p 所指向陣列的總長度。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    },
+    {
+      "title": "記憶體概念圖",
+      "type": "diagram",
+      "diagram": "memory"
+    }
+  ],
+  "takeaways": [
+    "教學上常以 Text、Data、BSS、Heap、Stack 介紹程式位址空間，但實際區段位置、保護及成長方向依系統而定。",
+    "區域自動變數在區塊生命週期內存在；static 與全域物件通常具有靜態儲存期；malloc 配置物件直到 free 才結束生命週期。",
+    "指標儲存物件位址，sizeof 不等於指標所指資料長度；不同型別可能要求對齊，struct 也可能插入 padding。",
+    "Big-endian 與 Little-endian 描述多位元組資料在記憶體的位元組順序，跨機器交換二進位資料時需要明確定義格式。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「記憶體區段」，下列何者最合理？",
+      "choices": [
+        "教學上常以 Text、Data、BSS、Heap、Stack 介紹程式位址空間，但實際區段位置、保護及成長方向依系統而定。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "教學上常以 Text、Data、BSS、Heap、Stack 介紹程式位址空間，但實際區段位置、保護及成長方向依系統而定。"
+    }
+  ],
+  "references": [
+    {
+      "title": "cppreference：C language",
+      "url": "https://en.cppreference.com/w/c/language"
+    }
+  ]
+}

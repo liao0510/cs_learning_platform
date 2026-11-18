@@ -1,0 +1,87 @@
+{
+  "id": "guide-algorithms-optimization",
+  "category": "algorithms",
+  "subcategory": "optimization",
+  "title": "最佳化、A*、Q-learning 與 DQN",
+  "summary": "涵蓋最佳化與進階演算法的重要概念、條件、實例及自我檢測。",
+  "difficulty": "advanced",
+  "minutes": 15,
+  "keywords": [
+    "最佳化與進階演算法",
+    "數學最佳化",
+    "A* 搜尋",
+    "Q-learning",
+    "DQN",
+    "應用到 AP Placement"
+  ],
+  "sections": [
+    {
+      "title": "數學最佳化",
+      "type": "text",
+      "paragraphs": [
+        "先定義決策變數、目標函數和限制式；最大覆蓋率與最小 AP 數量可能互相衝突，需要權衡。"
+      ]
+    },
+    {
+      "title": "A* 搜尋",
+      "type": "text",
+      "paragraphs": [
+        "以 f(n)=g(n)+h(n) 引導搜尋；h(n) 若滿足適當條件，可保證最優性並降低探索量。"
+      ]
+    },
+    {
+      "title": "Q-learning",
+      "type": "text",
+      "paragraphs": [
+        "將問題描述成狀態、動作、獎勵與轉移；透過 TD 更新估計長期回報，學習策略。"
+      ]
+    },
+    {
+      "title": "DQN",
+      "type": "text",
+      "paragraphs": [
+        "以神經網路估計 Q 值，常配合 Replay Buffer 與 Target Network 改善訓練穩定性；收斂與最佳性並無一般保證。"
+      ]
+    },
+    {
+      "title": "應用到 AP Placement",
+      "type": "text",
+      "paragraphs": [
+        "狀態可含 AP 位置與遮蔽物，動作為移動或新增 AP，獎勵可綜合 Coverage、Connectivity 與 Throughput 滿足率。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "對同一個平面圖，AP 數量少但覆蓋不足與 AP 多但干擾增加，都是最佳化目標需要處理的折衷。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    }
+  ],
+  "takeaways": [
+    "先定義決策變數、目標函數和限制式；最大覆蓋率與最小 AP 數量可能互相衝突，需要權衡。",
+    "以 f(n)=g(n)+h(n) 引導搜尋；h(n) 若滿足適當條件，可保證最優性並降低探索量。",
+    "將問題描述成狀態、動作、獎勵與轉移；透過 TD 更新估計長期回報，學習策略。",
+    "以神經網路估計 Q 值，常配合 Replay Buffer 與 Target Network 改善訓練穩定性；收斂與最佳性並無一般保證。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「數學最佳化」，下列何者最合理？",
+      "choices": [
+        "先定義決策變數、目標函數和限制式。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "先定義決策變數、目標函數和限制式；最大覆蓋率與最小 AP 數量可能互相衝突，需要權衡。"
+    }
+  ],
+  "references": [
+    {
+      "title": "MIT OpenCourseWare 6.006",
+      "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/"
+    }
+  ]
+}

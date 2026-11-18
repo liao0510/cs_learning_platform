@@ -225,3 +225,11 @@ The repository should demonstrate **rule-guided extensibility**: after the initi
 - New interactive demos must be self-contained, have a Reset action, and include a readable description of behavior and limitations.
 - Make sure `npm` is not required to view the published site; simple Node built-in smoke tests may be used locally for pure formulas and JSON consistency.
 - Keep index/category/topic views shareable with query-string links and preserve behavior under GitHub Pages repository subpaths.
+
+## 18. Expanded Curriculum and Coverage (2026-11)
+
+- All 35 entries in `data/subcategories.json` have a corresponding in-depth *overview guide* named `guide-<category>-<subcategory>.json` and indexed in `data/topics.json`. Original 8 topic lessons remain intact.
+- Overview guides contain multiple concept sections, a worked example, three to five takeaways, a self-check quiz and category-specific reference links. They are **not** substitutes for future topic-by-topic deep dives.
+- When expanding a concept within a guide into a standalone lesson, preserve the overview, assign the same `category` and `subcategory`, create a new unique `id`, and check whether a specialized lesson already exists.
+- A lesson that presents a numeric equation must supply a tested working calculator; current additional calculator IDs are `cidr`, `schedule`, `paging`, `log-steps`, `wifi-airtime`, `backhaul`, `qam`, `dbm-mw`, and `allocation`. Maintain formula notes and input bounds.
+- Do not declare any subcategory complete solely because its overview exists. Future content can add diagrams, deeper examples, lab activities and topic-focused lessons in each subcategory.

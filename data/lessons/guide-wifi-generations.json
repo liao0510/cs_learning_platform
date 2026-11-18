@@ -1,0 +1,91 @@
+{
+  "id": "guide-wifi-generations",
+  "category": "wifi",
+  "subcategory": "generations",
+  "title": "Wi-Fi 4/5/6/6E/7 核心差異",
+  "summary": "涵蓋Wi-Fi 世代比較的重要概念、條件、實例及自我檢測。",
+  "difficulty": "intermediate",
+  "minutes": 15,
+  "keywords": [
+    "Wi-Fi 世代比較",
+    "Wi-Fi 4 / 5",
+    "Wi-Fi 6",
+    "Wi-Fi 6E",
+    "Wi-Fi 7",
+    "不等於一定最快"
+  ],
+  "sections": [
+    {
+      "title": "Wi-Fi 4 / 5",
+      "type": "text",
+      "paragraphs": [
+        "Wi-Fi 4（802.11n）引入多種 MIMO/頻寬改善；Wi-Fi 5（802.11ac）以 5 GHz 高速連線為重點，並支援更高階調變等特性。"
+      ]
+    },
+    {
+      "title": "Wi-Fi 6",
+      "type": "text",
+      "paragraphs": [
+        "Wi-Fi 6（802.11ax）強調高密度效率，支援 OFDMA、1024-QAM、Target Wake Time 等功能。"
+      ]
+    },
+    {
+      "title": "Wi-Fi 6E",
+      "type": "text",
+      "paragraphs": [
+        "Wi-Fi 6E 是在 6 GHz 可用地區導入 Wi-Fi 6 技術的品牌延伸，並非另一個不同的 IEEE PHY 世代。"
+      ]
+    },
+    {
+      "title": "Wi-Fi 7",
+      "type": "text",
+      "paragraphs": [
+        "Wi-Fi 7（802.11be）引入 MLO、320 MHz（受地區頻譜限制）、4096-QAM、Multi-RU 與 Preamble Puncturing 等能力。"
+      ]
+    },
+    {
+      "title": "不等於一定最快",
+      "type": "text",
+      "paragraphs": [
+        "最大速率是規格條件下的峰值；設備能力、空間串流數、頻段可用性、距離與干擾可能限制實際體驗。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "Wi-Fi 7 裝置即使標示支援 320 MHz，也可能因地區頻譜或 AP/Client 能力限制而只能使用較窄頻道。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    }
+  ],
+  "takeaways": [
+    "Wi-Fi 4（802.11n）引入多種 MIMO/頻寬改善；Wi-Fi 5（802.11ac）以 5 GHz 高速連線為重點，並支援更高階調變等特性。",
+    "Wi-Fi 6（802.11ax）強調高密度效率，支援 OFDMA、1024-QAM、Target Wake Time 等功能。",
+    "Wi-Fi 6E 是在 6 GHz 可用地區導入 Wi-Fi 6 技術的品牌延伸，並非另一個不同的 IEEE PHY 世代。",
+    "Wi-Fi 7（802.11be）引入 MLO、320 MHz（受地區頻譜限制）、4096-QAM、Multi-RU 與 Preamble Puncturing 等能力。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「Wi-Fi 4 / 5」，下列何者最合理？",
+      "choices": [
+        "Wi-Fi 4（802.11n）引入多種 MIMO/頻寬改善。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "Wi-Fi 4（802.11n）引入多種 MIMO/頻寬改善；Wi-Fi 5（802.11ac）以 5 GHz 高速連線為重點，並支援更高階調變等特性。"
+    }
+  ],
+  "references": [
+    {
+      "title": "Wi-Fi Alliance：Wi-Fi CERTIFIED 7",
+      "url": "https://www.wi-fi.org/discover-wi-fi/wi-fi-certified-7"
+    },
+    {
+      "title": "IEEE 802.11 標準工作組",
+      "url": "https://www.ieee802.org/11/"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "id": "guide-wifi-wireless-signal",
+  "category": "wifi",
+  "subcategory": "wireless-signal",
+  "title": "無線訊號：FSPL、RSSI、SNR、SINR",
+  "summary": "涵蓋無線傳播與訊號品質的重要概念、條件、實例及自我檢測。",
+  "difficulty": "intermediate",
+  "minutes": 12,
+  "keywords": [
+    "無線傳播與訊號品質",
+    "dB 與 dBm",
+    "路徑損耗",
+    "雜訊與 SNR",
+    "干擾與 SINR"
+  ],
+  "sections": [
+    {
+      "title": "dB 與 dBm",
+      "type": "text",
+      "paragraphs": [
+        "dB 是相對比值，dBm 是相對 1 mW 的絕對功率單位；兩個 dBm 不能直接相加，要先轉 mW。"
+      ]
+    },
+    {
+      "title": "路徑損耗",
+      "type": "text",
+      "paragraphs": [
+        "FSPL 是理想自由空間路徑損耗，頻率和距離增加會提高損耗；實際室內還有穿牆、反射、遮蔽與多徑。"
+      ]
+    },
+    {
+      "title": "雜訊與 SNR",
+      "type": "text",
+      "paragraphs": [
+        "熱雜訊近似 −174+10log10(B_Hz)+NF dBm；SNR 比較訊號功率與雜訊功率。"
+      ]
+    },
+    {
+      "title": "干擾與 SINR",
+      "type": "text",
+      "paragraphs": [
+        "SINR 同時考慮同頻干擾與熱雜訊，定義為訊號線性功率除以（干擾線性功率和雜訊線性功率）。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "若 S=-50 dBm、I=-80 dBm、N=-90 dBm，SINR 約 29.59 dB；先將干擾與雜訊轉成 mW 加總。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    },
+    {
+      "title": "dBm 與 mW 換算：互動計算",
+      "type": "formula",
+      "formula": "P_mW = 10^(P_dBm/10)。",
+      "details": [
+        "0 dBm=1 mW、10 dBm=10 mW",
+        "能量/功率相加必須先轉線性域。"
+      ],
+      "calculator": "dbm-mw"
+    }
+  ],
+  "takeaways": [
+    "dB 是相對比值，dBm 是相對 1 mW 的絕對功率單位；兩個 dBm 不能直接相加，要先轉 mW。",
+    "FSPL 是理想自由空間路徑損耗，頻率和距離增加會提高損耗；實際室內還有穿牆、反射、遮蔽與多徑。",
+    "熱雜訊近似 −174+10log10(B_Hz)+NF dBm；SNR 比較訊號功率與雜訊功率。",
+    "SINR 同時考慮同頻干擾與熱雜訊，定義為訊號線性功率除以（干擾線性功率和雜訊線性功率）。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「dB 與 dBm」，下列何者最合理？",
+      "choices": [
+        "dB 是相對比值，dBm 是相對 1 mW 的絕對功率單位。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "dB 是相對比值，dBm 是相對 1 mW 的絕對功率單位；兩個 dBm 不能直接相加，要先轉 mW。"
+    }
+  ],
+  "references": [
+    {
+      "title": "Wi-Fi Alliance：Wi-Fi CERTIFIED 7",
+      "url": "https://www.wi-fi.org/discover-wi-fi/wi-fi-certified-7"
+    },
+    {
+      "title": "IEEE 802.11 標準工作組",
+      "url": "https://www.ieee802.org/11/"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "id": "guide-networking-transport",
+  "category": "networking",
+  "subcategory": "transport",
+  "title": "TCP、UDP 與可靠傳輸",
+  "summary": "涵蓋傳輸層與可靠性的重要概念、條件、實例及自我檢測。",
+  "difficulty": "intermediate",
+  "minutes": 15,
+  "keywords": [
+    "傳輸層與可靠性",
+    "TCP 建立與結束",
+    "可靠性與流控",
+    "Congestion Control",
+    "UDP",
+    "Port 與 Socket"
+  ],
+  "sections": [
+    {
+      "title": "TCP 建立與結束",
+      "type": "text",
+      "paragraphs": [
+        "TCP 透過三向交握同步序號並建立連線狀態；連線結束常涉及雙向 FIN/ACK，具體封包數取決於情境。"
+      ]
+    },
+    {
+      "title": "可靠性與流控",
+      "type": "text",
+      "paragraphs": [
+        "TCP 利用序號、ACK、重傳與接收窗口提供可靠、按序位元組串流；接收窗口與網路壅塞控制是不同機制。"
+      ]
+    },
+    {
+      "title": "Congestion Control",
+      "type": "text",
+      "paragraphs": [
+        "壅塞控制調整傳送量避免網路壓垮；演算法與平台不同，不應把單一 cwnd 行為當作通用規則。"
+      ]
+    },
+    {
+      "title": "UDP",
+      "type": "text",
+      "paragraphs": [
+        "UDP 無連線、訊息導向，不自行保證傳遞順序與可靠性；應用可以自己設計重傳等機制。"
+      ]
+    },
+    {
+      "title": "Port 與 Socket",
+      "type": "text",
+      "paragraphs": [
+        "Port 協助辨識傳輸端點，Socket 包含地址與協定等資訊；TCP 連線常以來源/目的位址與埠組合識別。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "DNS 查詢常透過 UDP，但 DNS 也可透過 TCP 或加密傳輸；不能說 DNS 只能用 UDP。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    }
+  ],
+  "takeaways": [
+    "TCP 透過三向交握同步序號並建立連線狀態；連線結束常涉及雙向 FIN/ACK，具體封包數取決於情境。",
+    "TCP 利用序號、ACK、重傳與接收窗口提供可靠、按序位元組串流；接收窗口與網路壅塞控制是不同機制。",
+    "壅塞控制調整傳送量避免網路壓垮；演算法與平台不同，不應把單一 cwnd 行為當作通用規則。",
+    "UDP 無連線、訊息導向，不自行保證傳遞順序與可靠性；應用可以自己設計重傳等機制。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「TCP 建立與結束」，下列何者最合理？",
+      "choices": [
+        "TCP 透過三向交握同步序號並建立連線狀態。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "TCP 透過三向交握同步序號並建立連線狀態；連線結束常涉及雙向 FIN/ACK，具體封包數取決於情境。"
+    }
+  ],
+  "references": [
+    {
+      "title": "IETF RFC Editor",
+      "url": "https://www.rfc-editor.org/"
+    }
+  ]
+}

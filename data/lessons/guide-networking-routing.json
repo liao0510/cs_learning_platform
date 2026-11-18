@@ -1,0 +1,87 @@
+{
+  "id": "guide-networking-routing",
+  "category": "networking",
+  "subcategory": "routing",
+  "title": "Routing Table、Static Route、OSPF、BGP",
+  "summary": "涵蓋路由與網際網路的重要概念、條件、實例及自我檢測。",
+  "difficulty": "intermediate",
+  "minutes": 15,
+  "keywords": [
+    "路由與網際網路",
+    "Router 與 Default Gateway",
+    "Longest Prefix Match",
+    "Static 與 Dynamic Routing",
+    "Distance Vector 與 Link State",
+    "TTL / Hop Limit"
+  ],
+  "sections": [
+    {
+      "title": "Router 與 Default Gateway",
+      "type": "text",
+      "paragraphs": [
+        "主機依路由表決定下一跳；目的不在本地可達網段時通常交給預設閘道。"
+      ]
+    },
+    {
+      "title": "Longest Prefix Match",
+      "type": "text",
+      "paragraphs": [
+        "路由器從多個相符路由中優先選最長前綴；不只是選數值上最大的網路。"
+      ]
+    },
+    {
+      "title": "Static 與 Dynamic Routing",
+      "type": "text",
+      "paragraphs": [
+        "靜態路由由管理者設定；OSPF 在自治系統內交換鏈路狀態資訊，BGP 主要處理自治系統間路由策略。"
+      ]
+    },
+    {
+      "title": "Distance Vector 與 Link State",
+      "type": "text",
+      "paragraphs": [
+        "Distance Vector 主要交換距離估計，Link State 建立拓樸資訊並各自計算路徑。"
+      ]
+    },
+    {
+      "title": "TTL / Hop Limit",
+      "type": "text",
+      "paragraphs": [
+        "每經過一個路由跳點，IP TTL（IPv6 為 Hop Limit）減少，用於避免封包無限循環。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "0.0.0.0/0 是 IPv4 預設路由；若另有 192.168.1.0/24，送往 192.168.1.5 會優先符合 /24。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    }
+  ],
+  "takeaways": [
+    "主機依路由表決定下一跳；目的不在本地可達網段時通常交給預設閘道。",
+    "路由器從多個相符路由中優先選最長前綴；不只是選數值上最大的網路。",
+    "靜態路由由管理者設定；OSPF 在自治系統內交換鏈路狀態資訊，BGP 主要處理自治系統間路由策略。",
+    "Distance Vector 主要交換距離估計，Link State 建立拓樸資訊並各自計算路徑。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「Router 與 Default Gateway」，下列何者最合理？",
+      "choices": [
+        "主機依路由表決定下一跳。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "主機依路由表決定下一跳；目的不在本地可達網段時通常交給預設閘道。"
+    }
+  ],
+  "references": [
+    {
+      "title": "IETF RFC Editor",
+      "url": "https://www.rfc-editor.org/"
+    }
+  ]
+}

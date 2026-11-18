@@ -1,0 +1,79 @@
+{
+  "id": "guide-data-structures-hashing",
+  "category": "data-structures",
+  "subcategory": "hashing",
+  "title": "Hash Table、Collision 與 Union-Find",
+  "summary": "涵蓋雜湊與集合的重要概念、條件、實例及自我檢測。",
+  "difficulty": "intermediate",
+  "minutes": 12,
+  "keywords": [
+    "雜湊與集合",
+    "雜湊表原理",
+    "碰撞處理",
+    "Set 與 Map",
+    "Union-Find"
+  ],
+  "sections": [
+    {
+      "title": "雜湊表原理",
+      "type": "text",
+      "paragraphs": [
+        "雜湊函式將 key 映射到 bucket。良好的分布和適當 load factor 有助於平均查詢效率，但不能保證每筆都 O(1)。"
+      ]
+    },
+    {
+      "title": "碰撞處理",
+      "type": "text",
+      "paragraphs": [
+        "不同 key 可能落在相同桶位。Chaining 在桶位放多筆資料；Open Addressing 則尋找其他槽位，必須定義探查與刪除規則。"
+      ]
+    },
+    {
+      "title": "Set 與 Map",
+      "type": "text",
+      "paragraphs": [
+        "Set 儲存不重複元素；Map 對應 key → value。Hash-based Map 不等於依鍵值有序的 Tree Map。"
+      ]
+    },
+    {
+      "title": "Union-Find",
+      "type": "text",
+      "paragraphs": [
+        "用 parent 陣列維護不相交集合，Find 查詢代表元、Union 合併集合；搭配 path compression 與 union by rank 有非常好的攤銷效能。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "若 key「apple」與「pear」的雜湊值都落在 bucket 3，就必須用碰撞策略保留兩筆資料。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    }
+  ],
+  "takeaways": [
+    "雜湊函式將 key 映射到 bucket。",
+    "不同 key 可能落在相同桶位。",
+    "Set 儲存不重複元素；Map 對應 key → value。",
+    "用 parent 陣列維護不相交集合，Find 查詢代表元、Union 合併集合；搭配 path compression 與 union by rank 有非常好的攤銷效能。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「雜湊表原理」，下列何者最合理？",
+      "choices": [
+        "雜湊函式將 key 映射到 bucket。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "雜湊函式將 key 映射到 bucket。良好的分布和適當 load factor 有助於平均查詢效率，但不能保證每筆都 O(1)。"
+    }
+  ],
+  "references": [
+    {
+      "title": "OpenDSA 電腦科學教材",
+      "url": "https://opendsa-server.cs.vt.edu/"
+    }
+  ]
+}

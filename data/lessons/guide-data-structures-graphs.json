@@ -1,0 +1,87 @@
+{
+  "id": "guide-data-structures-graphs",
+  "category": "data-structures",
+  "subcategory": "graphs",
+  "title": "Graph：節點、邊與表示方法",
+  "summary": "涵蓋圖形資料結構的重要概念、條件、實例及自我檢測。",
+  "difficulty": "beginner",
+  "minutes": 15,
+  "keywords": [
+    "圖形資料結構",
+    "圖的基本模型",
+    "加權與無權",
+    "鄰接矩陣",
+    "鄰接串列",
+    "網路拓樸應用"
+  ],
+  "sections": [
+    {
+      "title": "圖的基本模型",
+      "type": "text",
+      "paragraphs": [
+        "圖 G=(V,E)，V 表示節點集合、E 表示邊集合。社群好友關係常建為無向圖，單向網頁連結可建為有向圖。"
+      ]
+    },
+    {
+      "title": "加權與無權",
+      "type": "text",
+      "paragraphs": [
+        "邊權重可代表距離、延遲或成本。無權圖可用 BFS 找最少邊數路徑；非負權重最短路徑可用 Dijkstra。"
+      ]
+    },
+    {
+      "title": "鄰接矩陣",
+      "type": "text",
+      "paragraphs": [
+        "以 V×V 矩陣標示節點間是否存在邊或其權重，空間 O(V²)，測試指定邊通常 O(1)。"
+      ]
+    },
+    {
+      "title": "鄰接串列",
+      "type": "text",
+      "paragraphs": [
+        "每個節點保有鄰居清單，稀疏圖通常比鄰接矩陣省空間，空間約 O(V+E)。"
+      ]
+    },
+    {
+      "title": "網路拓樸應用",
+      "type": "text",
+      "paragraphs": [
+        "Mesh AP 可以做成節點，符合 SINR 門檻的可行鏈路做成邊；路徑還需檢查 Gateway 可達性與鏈路容量。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "三個 AP：A—B—C 若沒有 A—C 直連，A 到 C 必須經 B 中繼。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    }
+  ],
+  "takeaways": [
+    "圖 G=(V,E)，V 表示節點集合、E 表示邊集合。",
+    "邊權重可代表距離、延遲或成本。",
+    "以 V×V 矩陣標示節點間是否存在邊或其權重，空間 O(V²)，測試指定邊通常 O(1)。",
+    "每個節點保有鄰居清單，稀疏圖通常比鄰接矩陣省空間，空間約 O(V+E)。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「圖的基本模型」，下列何者最合理？",
+      "choices": [
+        "圖 G=(V,E)，V 表示節點集合、E 表示邊集合。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "圖 G=(V,E)，V 表示節點集合、E 表示邊集合。社群好友關係常建為無向圖，單向網頁連結可建為有向圖。"
+    }
+  ],
+  "references": [
+    {
+      "title": "OpenDSA 電腦科學教材",
+      "url": "https://opendsa-server.cs.vt.edu/"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "id": "guide-programming-pointers",
+  "category": "programming",
+  "subcategory": "pointers",
+  "title": "C 指標：位址、解參考與陣列",
+  "summary": "涵蓋指標技術的重要概念、條件、實例及自我檢測。",
+  "difficulty": "intermediate",
+  "minutes": 12,
+  "keywords": [
+    "指標技術",
+    "取址與解參考",
+    "陣列與指標運算",
+    "雙重指標",
+    "const 與函式指標"
+  ],
+  "sections": [
+    {
+      "title": "取址與解參考",
+      "type": "text",
+      "paragraphs": [
+        "&x 取得物件 x 的位址；*p 存取 p 所指向的有效物件。未初始化、無效或已釋放的指標不可解參考。"
+      ]
+    },
+    {
+      "title": "陣列與指標運算",
+      "type": "text",
+      "paragraphs": [
+        "陣列在許多運算式中會轉換為第一個元素指標，但陣列本身與指標不是同一種型別；p+1 依所指型別跨過一個元素。"
+      ]
+    },
+    {
+      "title": "雙重指標",
+      "type": "text",
+      "paragraphs": [
+        "int **pp 可用來指向 int* 變數；函式需要更新呼叫端指標時可以透過雙重指標。"
+      ]
+    },
+    {
+      "title": "const 與函式指標",
+      "type": "text",
+      "paragraphs": [
+        "const int *p 不允許透過 p 修改所指整數；int * const p 不允許重新指定 p。函式指標能儲存相容的函式位址。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "int a[3]={10,20,30}; int *p=a; *(p+1) 讀到 20，前提是 p 仍指向同一個有效陣列內的位置。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    }
+  ],
+  "takeaways": [
+    "&x 取得物件 x 的位址；*p 存取 p 所指向的有效物件。",
+    "陣列在許多運算式中會轉換為第一個元素指標，但陣列本身與指標不是同一種型別；p+1 依所指型別跨過一個元素。",
+    "int **pp 可用來指向 int* 變數；函式需要更新呼叫端指標時可以透過雙重指標。",
+    "const int *p 不允許透過 p 修改所指整數；int * const p 不允許重新指定 p。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「取址與解參考」，下列何者最合理？",
+      "choices": [
+        "&x 取得物件 x 的位址。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "&x 取得物件 x 的位址；*p 存取 p 所指向的有效物件。未初始化、無效或已釋放的指標不可解參考。"
+    }
+  ],
+  "references": [
+    {
+      "title": "cppreference：C language",
+      "url": "https://en.cppreference.com/w/c/language"
+    }
+  ]
+}

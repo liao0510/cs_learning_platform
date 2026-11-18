@@ -1,0 +1,79 @@
+{
+  "id": "guide-operating-systems-os-basics",
+  "category": "operating-systems",
+  "subcategory": "os-basics",
+  "title": "Kernel、System Call、中斷與切換",
+  "summary": "涵蓋OS 核心基礎的重要概念、條件、實例及自我檢測。",
+  "difficulty": "beginner",
+  "minutes": 12,
+  "keywords": [
+    "OS 核心基礎",
+    "Kernel 與 User Space",
+    "System Call",
+    "Interrupt 與 Exception",
+    "Context Switch"
+  ],
+  "sections": [
+    {
+      "title": "Kernel 與 User Space",
+      "type": "text",
+      "paragraphs": [
+        "作業系統核心負責資源管理、記憶體與裝置控制；使用者程式透過受控介面請求核心服務。"
+      ]
+    },
+    {
+      "title": "System Call",
+      "type": "text",
+      "paragraphs": [
+        "應用程式通常透過系統函式庫呼叫開檔、讀寫、建立程序等服務，涉及從使用者態轉入核心態。"
+      ]
+    },
+    {
+      "title": "Interrupt 與 Exception",
+      "type": "text",
+      "paragraphs": [
+        "硬體中斷由外部事件觸發，例外則與目前指令執行相關，例如除零或頁面錯誤。"
+      ]
+    },
+    {
+      "title": "Context Switch",
+      "type": "text",
+      "paragraphs": [
+        "排程切換執行實體時，需要保存與恢復相關執行狀態；其成本與處理器與 OS 實作相關。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "程式讀取檔案時，通常透過 read 類系統呼叫讓核心與檔案系統協作。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    }
+  ],
+  "takeaways": [
+    "作業系統核心負責資源管理、記憶體與裝置控制；使用者程式透過受控介面請求核心服務。",
+    "應用程式通常透過系統函式庫呼叫開檔、讀寫、建立程序等服務，涉及從使用者態轉入核心態。",
+    "硬體中斷由外部事件觸發，例外則與目前指令執行相關，例如除零或頁面錯誤。",
+    "排程切換執行實體時，需要保存與恢復相關執行狀態；其成本與處理器與 OS 實作相關。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「Kernel 與 User Space」，下列何者最合理？",
+      "choices": [
+        "作業系統核心負責資源管理、記憶體與裝置控制。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "作業系統核心負責資源管理、記憶體與裝置控制；使用者程式透過受控介面請求核心服務。"
+    }
+  ],
+  "references": [
+    {
+      "title": "Operating Systems: Three Easy Pieces",
+      "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/"
+    }
+  ]
+}

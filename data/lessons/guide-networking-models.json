@@ -1,0 +1,84 @@
+{
+  "id": "guide-networking-models",
+  "category": "networking",
+  "subcategory": "models",
+  "title": "OSI / TCP-IP 與封裝解封裝",
+  "summary": "涵蓋網路模型與基礎的重要概念、條件、實例及自我檢測。",
+  "difficulty": "beginner",
+  "minutes": 12,
+  "keywords": [
+    "網路模型與基礎",
+    "OSI 模型",
+    "TCP/IP 模型",
+    "封裝",
+    "延遲、抖動與丟包"
+  ],
+  "sections": [
+    {
+      "title": "OSI 模型",
+      "type": "text",
+      "paragraphs": [
+        "OSI 七層把通訊功能抽象分層；它是參考模型，實際網際網路協定不必逐層一對一對應。"
+      ]
+    },
+    {
+      "title": "TCP/IP 模型",
+      "type": "text",
+      "paragraphs": [
+        "常見教學採應用、傳輸、網際網路、鏈路四層；不同教材也會拆分實體層。"
+      ]
+    },
+    {
+      "title": "封裝",
+      "type": "text",
+      "paragraphs": [
+        "送出資料時，傳輸層加上 TCP/UDP header，IP 層加上 IP header，鏈路層形成 frame；接收端反向解析。"
+      ]
+    },
+    {
+      "title": "延遲、抖動與丟包",
+      "type": "text",
+      "paragraphs": [
+        "Latency 是傳輸時間相關量，Jitter 是延遲變動，Packet Loss 是資料未成功送達的比例；Bandwidth 不等於實際 Throughput。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "HTTP 訊息可由 TCP Segment 承載，再封裝到 IPv4 Packet，最後放入 Ethernet Frame。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    },
+    {
+      "title": "OSI 互動層級圖",
+      "type": "diagram",
+      "diagram": "osi"
+    }
+  ],
+  "takeaways": [
+    "OSI 七層把通訊功能抽象分層；它是參考模型，實際網際網路協定不必逐層一對一對應。",
+    "常見教學採應用、傳輸、網際網路、鏈路四層；不同教材也會拆分實體層。",
+    "送出資料時，傳輸層加上 TCP/UDP header，IP 層加上 IP header，鏈路層形成 frame；接收端反向解析。",
+    "Latency 是傳輸時間相關量，Jitter 是延遲變動，Packet Loss 是資料未成功送達的比例；Bandwidth 不等於實際 Throughput。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「OSI 模型」，下列何者最合理？",
+      "choices": [
+        "OSI 七層把通訊功能抽象分層。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "OSI 七層把通訊功能抽象分層；它是參考模型，實際網際網路協定不必逐層一對一對應。"
+    }
+  ],
+  "references": [
+    {
+      "title": "IETF RFC Editor",
+      "url": "https://www.rfc-editor.org/"
+    }
+  ]
+}

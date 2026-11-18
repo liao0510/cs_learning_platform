@@ -1,0 +1,87 @@
+{
+  "id": "guide-networking-application",
+  "category": "networking",
+  "subcategory": "application",
+  "title": "DNS、HTTP/HTTPS、TLS 與 Ping 排錯",
+  "summary": "涵蓋應用層與網路診斷的重要概念、條件、實例及自我檢測。",
+  "difficulty": "beginner",
+  "minutes": 15,
+  "keywords": [
+    "應用層與網路診斷",
+    "DNS 解讀",
+    "HTTP 與 HTTPS",
+    "TLS",
+    "Ping / ICMP",
+    "排錯順序"
+  ],
+  "sections": [
+    {
+      "title": "DNS 解讀",
+      "type": "text",
+      "paragraphs": [
+        "DNS 將名稱映射到不同類型紀錄，例如 A、AAAA、MX；Resolver 可以透過快取避免每次都向權威 DNS 查詢。"
+      ]
+    },
+    {
+      "title": "HTTP 與 HTTPS",
+      "type": "text",
+      "paragraphs": [
+        "HTTP 是請求/回應應用協定；HTTPS 在 HTTP 通訊上提供 TLS 保護，並不表示網站本身所有行為都可信。"
+      ]
+    },
+    {
+      "title": "TLS",
+      "type": "text",
+      "paragraphs": [
+        "TLS 可驗證伺服器身分並加密通道；版本、憑證驗證與加密套件選擇影響安全性。"
+      ]
+    },
+    {
+      "title": "Ping / ICMP",
+      "type": "text",
+      "paragraphs": [
+        "Ping 常以 ICMP Echo 測連通與往返時間；不回應可能是防火牆策略，不代表所有服務都故障。"
+      ]
+    },
+    {
+      "title": "排錯順序",
+      "type": "text",
+      "paragraphs": [
+        "先檢查 IP、Mask、Gateway，再測 IP 連通與 DNS 解析；能 ping 8.8.8.8 卻無法開網站時，應優先排查 DNS、HTTP/TLS 或代理設定。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "nslookup example.com 可測 DNS；若 IP 通、名稱不通，要檢查 DNS Server 而不是直接假設路由器壞了。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    }
+  ],
+  "takeaways": [
+    "DNS 將名稱映射到不同類型紀錄，例如 A、AAAA、MX；Resolver 可以透過快取避免每次都向權威 DNS 查詢。",
+    "HTTP 是請求/回應應用協定；HTTPS 在 HTTP 通訊上提供 TLS 保護，並不表示網站本身所有行為都可信。",
+    "TLS 可驗證伺服器身分並加密通道；版本、憑證驗證與加密套件選擇影響安全性。",
+    "Ping 常以 ICMP Echo 測連通與往返時間；不回應可能是防火牆策略，不代表所有服務都故障。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「DNS 解讀」，下列何者最合理？",
+      "choices": [
+        "DNS 將名稱映射到不同類型紀錄，例如 A、AAAA、MX。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "DNS 將名稱映射到不同類型紀錄，例如 A、AAAA、MX；Resolver 可以透過快取避免每次都向權威 DNS 查詢。"
+    }
+  ],
+  "references": [
+    {
+      "title": "IETF RFC Editor",
+      "url": "https://www.rfc-editor.org/"
+    }
+  ]
+}

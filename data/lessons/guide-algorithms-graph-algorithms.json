@@ -1,0 +1,79 @@
+{
+  "id": "guide-algorithms-graph-algorithms",
+  "category": "algorithms",
+  "subcategory": "graph-algorithms",
+  "title": "BFS、DFS、Dijkstra 與最小生成樹",
+  "summary": "涵蓋圖論演算法的重要概念、條件、實例及自我檢測。",
+  "difficulty": "intermediate",
+  "minutes": 12,
+  "keywords": [
+    "圖論演算法",
+    "BFS 與 DFS",
+    "Dijkstra",
+    "Bellman-Ford 與 Floyd-Warshall",
+    "MST 與拓樸排序"
+  ],
+  "sections": [
+    {
+      "title": "BFS 與 DFS",
+      "type": "text",
+      "paragraphs": [
+        "BFS 利用 Queue 逐層探索，在無權圖找最少邊數路徑；DFS 用遞迴或 Stack 深入探索，常用於連通性與拓樸排序。"
+      ]
+    },
+    {
+      "title": "Dijkstra",
+      "type": "text",
+      "paragraphs": [
+        "適用邊權重非負的單源最短路徑；若有負權邊，不應直接套用標準 Dijkstra。"
+      ]
+    },
+    {
+      "title": "Bellman-Ford 與 Floyd-Warshall",
+      "type": "text",
+      "paragraphs": [
+        "Bellman-Ford 可處理負權邊並偵測可達負權循環；Floyd-Warshall 常用於所有點對最短路徑。"
+      ]
+    },
+    {
+      "title": "MST 與拓樸排序",
+      "type": "text",
+      "paragraphs": [
+        "Prim/Kruskal 找連通無向加權圖的最小生成樹；拓樸排序則適用 DAG（有向無環圖）。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "若 A—B 權重 2、B—C 權重 3、A—C 權重 10，A 到 C 最短路徑是 A→B→C，權重 5。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    }
+  ],
+  "takeaways": [
+    "BFS 利用 Queue 逐層探索，在無權圖找最少邊數路徑；DFS 用遞迴或 Stack 深入探索，常用於連通性與拓樸排序。",
+    "適用邊權重非負的單源最短路徑；若有負權邊，不應直接套用標準 Dijkstra。",
+    "Bellman-Ford 可處理負權邊並偵測可達負權循環；Floyd-Warshall 常用於所有點對最短路徑。",
+    "Prim/Kruskal 找連通無向加權圖的最小生成樹；拓樸排序則適用 DAG（有向無環圖）。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「BFS 與 DFS」，下列何者最合理？",
+      "choices": [
+        "BFS 利用 Queue 逐層探索，在無權圖找最少邊數路徑。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "BFS 利用 Queue 逐層探索，在無權圖找最少邊數路徑；DFS 用遞迴或 Stack 深入探索，常用於連通性與拓樸排序。"
+    }
+  ],
+  "references": [
+    {
+      "title": "MIT OpenCourseWare 6.006",
+      "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/"
+    }
+  ]
+}

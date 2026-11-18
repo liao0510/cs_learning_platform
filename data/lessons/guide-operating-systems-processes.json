@@ -1,0 +1,92 @@
+{
+  "id": "guide-operating-systems-processes",
+  "category": "operating-systems",
+  "subcategory": "processes",
+  "title": "程序狀態、PCB、IPC 與多執行緒",
+  "summary": "涵蓋程序與執行緒的重要概念、條件、實例及自我檢測。",
+  "difficulty": "beginner",
+  "minutes": 15,
+  "keywords": [
+    "程序與執行緒",
+    "程序生命週期",
+    "PCB 與排程資料",
+    "Thread 與共享",
+    "IPC",
+    "fork 與 exec"
+  ],
+  "sections": [
+    {
+      "title": "程序生命週期",
+      "type": "text",
+      "paragraphs": [
+        "常見概念狀態為 New、Ready、Running、Waiting、Terminated；狀態轉換依排程、I/O 等事件發生。"
+      ]
+    },
+    {
+      "title": "PCB 與排程資料",
+      "type": "text",
+      "paragraphs": [
+        "作業系統以 PCB 等核心資料結構紀錄 PID、狀態、排程相關資訊與記憶體管理資訊。"
+      ]
+    },
+    {
+      "title": "Thread 與共享",
+      "type": "text",
+      "paragraphs": [
+        "同一程序內 Thread 共享位址空間，多個 Thread 有獨立執行狀態與堆疊，需要注意 Race Condition。"
+      ]
+    },
+    {
+      "title": "IPC",
+      "type": "text",
+      "paragraphs": [
+        "Pipe、Socket、Shared Memory 等是程序間通訊手段；共享記憶體速度快但仍需同步。"
+      ]
+    },
+    {
+      "title": "fork 與 exec",
+      "type": "text",
+      "paragraphs": [
+        "在類 Unix 系統，fork 建立子程序、exec 系列呼叫將程序映像換成另一個程式。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "一個 Web Server 程序中可使用多個 Thread 處理不同連線，但共享計數器需要同步。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    },
+    {
+      "title": "Process/Thread 示意圖",
+      "type": "diagram",
+      "diagram": "process"
+    }
+  ],
+  "takeaways": [
+    "常見概念狀態為 New、Ready、Running、Waiting、Terminated；狀態轉換依排程、I/O 等事件發生。",
+    "作業系統以 PCB 等核心資料結構紀錄 PID、狀態、排程相關資訊與記憶體管理資訊。",
+    "同一程序內 Thread 共享位址空間，多個 Thread 有獨立執行狀態與堆疊，需要注意 Race Condition。",
+    "Pipe、Socket、Shared Memory 等是程序間通訊手段；共享記憶體速度快但仍需同步。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「程序生命週期」，下列何者最合理？",
+      "choices": [
+        "常見概念狀態為 New、Ready、Running、Waiting、Terminated。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "常見概念狀態為 New、Ready、Running、Waiting、Terminated；狀態轉換依排程、I/O 等事件發生。"
+    }
+  ],
+  "references": [
+    {
+      "title": "Operating Systems: Three Easy Pieces",
+      "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/"
+    }
+  ]
+}

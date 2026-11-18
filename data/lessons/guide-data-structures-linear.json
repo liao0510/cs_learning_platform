@@ -1,0 +1,84 @@
+{
+  "id": "guide-data-structures-linear",
+  "category": "data-structures",
+  "subcategory": "linear",
+  "title": "Array、Linked List、Stack、Queue 總覽",
+  "summary": "涵蓋線性資料結構的重要概念、條件、實例及自我檢測。",
+  "difficulty": "beginner",
+  "minutes": 12,
+  "keywords": [
+    "線性資料結構",
+    "陣列 Array",
+    "鏈結串列 Linked List",
+    "Stack 與 Queue",
+    "循環佇列與 Deque"
+  ],
+  "sections": [
+    {
+      "title": "陣列 Array",
+      "type": "text",
+      "paragraphs": [
+        "陣列可直接以索引存取，適合密集資料與遍歷；若固定長度陣列空間不足，需改變配置或選用可成長容器。"
+      ]
+    },
+    {
+      "title": "鏈結串列 Linked List",
+      "type": "text",
+      "paragraphs": [
+        "每個節點儲存資料與下一節點位址；只知道 head 時搜尋第 k 個節點需要 O(k) 走訪，並不支援任意索引 O(1)。"
+      ]
+    },
+    {
+      "title": "Stack 與 Queue",
+      "type": "text",
+      "paragraphs": [
+        "Stack 採後進先出 LIFO；Queue 採先進先出 FIFO。它們是操作語意，可以用陣列或鏈結串列實作。"
+      ]
+    },
+    {
+      "title": "循環佇列與 Deque",
+      "type": "text",
+      "paragraphs": [
+        "循環佇列藉 front/rear 指標重複利用固定容量陣列；Deque 允許從兩端插入和刪除，適用滑動視窗等場景。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "若工作項目依抵達順序處理，選 Queue；函式呼叫回復原順序通常由 Stack 模型解釋。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    },
+    {
+      "title": "Stack / Queue 操作",
+      "type": "demo",
+      "demo": "stack-queue"
+    }
+  ],
+  "takeaways": [
+    "陣列可直接以索引存取，適合密集資料與遍歷；若固定長度陣列空間不足，需改變配置或選用可成長容器。",
+    "每個節點儲存資料與下一節點位址；只知道 head 時搜尋第 k 個節點需要 O(k) 走訪，並不支援任意索引 O(1)。",
+    "Stack 採後進先出 LIFO；Queue 採先進先出 FIFO。",
+    "循環佇列藉 front/rear 指標重複利用固定容量陣列；Deque 允許從兩端插入和刪除，適用滑動視窗等場景。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「陣列 Array」，下列何者最合理？",
+      "choices": [
+        "陣列可直接以索引存取，適合密集資料與遍歷。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "陣列可直接以索引存取，適合密集資料與遍歷；若固定長度陣列空間不足，需改變配置或選用可成長容器。"
+    }
+  ],
+  "references": [
+    {
+      "title": "OpenDSA 電腦科學教材",
+      "url": "https://opendsa-server.cs.vt.edu/"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "id": "guide-algorithms-analysis",
+  "category": "algorithms",
+  "subcategory": "analysis",
+  "title": "Big-O、遞迴與演算法正確性",
+  "summary": "涵蓋演算法分析的重要概念、條件、實例及自我檢測。",
+  "difficulty": "beginner",
+  "minutes": 12,
+  "keywords": [
+    "演算法分析",
+    "漸近符號",
+    "最好、平均、最壞",
+    "遞迴與堆疊",
+    "正確性證明"
+  ],
+  "sections": [
+    {
+      "title": "漸近符號",
+      "type": "text",
+      "paragraphs": [
+        "Big-O 是漸近上界、Big-Ω 是下界、Big-Θ 是緊確界；常見成長速度依序為常數、對數、線性、n log n、平方等。"
+      ]
+    },
+    {
+      "title": "最好、平均、最壞",
+      "type": "text",
+      "paragraphs": [
+        "同一演算法對不同輸入可能耗時不同。線性搜尋最好的情況 O(1)，最壞 O(n)，平均案例還需明確假設資料分布。"
+      ]
+    },
+    {
+      "title": "遞迴與堆疊",
+      "type": "text",
+      "paragraphs": [
+        "遞迴要有基本情況與會逼近基本情況的遞迴步驟；每次呼叫通常需要新的呼叫框架。"
+      ]
+    },
+    {
+      "title": "正確性證明",
+      "type": "text",
+      "paragraphs": [
+        "可使用迴圈不變量說明每次迭代後維持的條件，最後結合終止條件得到正確結果。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "長度 n 的陣列中，每個元素最多檢查一次的搜尋屬 O(n)；不代表所有輸入都一定檢查 n 次。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    },
+    {
+      "title": "對數搜尋步數上界：互動計算",
+      "type": "formula",
+      "formula": "對 n>0 的候選數量，ceil(log2(n+1)) 可作二分搜尋最壞比較次數的常用上界。",
+      "details": [
+        "依排序且每次比較能排除至少一半候選元素",
+        "不同實作的比較計次細節可能有差異。"
+      ],
+      "calculator": "log-steps"
+    }
+  ],
+  "takeaways": [
+    "Big-O 是漸近上界、Big-Ω 是下界、Big-Θ 是緊確界；常見成長速度依序為常數、對數、線性、n log n、平方等。",
+    "同一演算法對不同輸入可能耗時不同。",
+    "遞迴要有基本情況與會逼近基本情況的遞迴步驟；每次呼叫通常需要新的呼叫框架。",
+    "可使用迴圈不變量說明每次迭代後維持的條件，最後結合終止條件得到正確結果。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「漸近符號」，下列何者最合理？",
+      "choices": [
+        "Big-O 是漸近上界、Big-Ω 是下界、Big-Θ 是緊確界。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "Big-O 是漸近上界、Big-Ω 是下界、Big-Θ 是緊確界；常見成長速度依序為常數、對數、線性、n log n、平方等。"
+    }
+  ],
+  "references": [
+    {
+      "title": "MIT OpenCourseWare 6.006",
+      "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/"
+    }
+  ]
+}

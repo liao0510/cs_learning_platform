@@ -1,0 +1,87 @@
+{
+  "id": "guide-programming-c-basics",
+  "category": "programming",
+  "subcategory": "c-basics",
+  "title": "C 語言基礎：型別、流程、函式與結構體",
+  "summary": "涵蓋C 語言基礎的重要概念、條件、實例及自我檢測。",
+  "difficulty": "beginner",
+  "minutes": 15,
+  "keywords": [
+    "C 語言基礎",
+    "資料型別與運算",
+    "條件判斷與迴圈",
+    "函式與傳值",
+    "陣列與字串",
+    "struct、union、enum"
+  ],
+  "sections": [
+    {
+      "title": "資料型別與運算",
+      "type": "text",
+      "paragraphs": [
+        "int、char、float、double 的範圍和大小依標準與平台而異；sizeof 回傳位元組大小。整數除法會捨去小數部分。"
+      ]
+    },
+    {
+      "title": "條件判斷與迴圈",
+      "type": "text",
+      "paragraphs": [
+        "if/else、switch 控制分支；for、while、do while 控制重複執行。應確認迴圈終止條件，避免越界或無限迴圈。"
+      ]
+    },
+    {
+      "title": "函式與傳值",
+      "type": "text",
+      "paragraphs": [
+        "C 的參數採傳值；若希望函式能修改呼叫端物件，可將該物件位址傳入，並在函式內透過指標存取。"
+      ]
+    },
+    {
+      "title": "陣列與字串",
+      "type": "text",
+      "paragraphs": [
+        "陣列元素依序儲存；C 字串是以零字元 \\0 結尾的 char 序列。處理字串時必須預留終止字元所需空間。"
+      ]
+    },
+    {
+      "title": "struct、union、enum",
+      "type": "text",
+      "paragraphs": [
+        "struct 聚合欄位，union 多個成員共用儲存空間，enum 提供具名整數常數。不要假設 struct 完全沒有 padding。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "int x=5; x/2 的整數結果為 2；若要得到 2.5，可使用 5.0/2 或明確轉為浮點運算。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    }
+  ],
+  "takeaways": [
+    "int、char、float、double 的範圍和大小依標準與平台而異；sizeof 回傳位元組大小。",
+    "if/else、switch 控制分支；for、while、do while 控制重複執行。",
+    "C 的參數採傳值；若希望函式能修改呼叫端物件，可將該物件位址傳入，並在函式內透過指標存取。",
+    "陣列元素依序儲存；C 字串是以零字元 \\0 結尾的 char 序列。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「資料型別與運算」，下列何者最合理？",
+      "choices": [
+        "int、char、float、double 的範圍和大小依標準與平台而異。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "int、char、float、double 的範圍和大小依標準與平台而異；sizeof 回傳位元組大小。整數除法會捨去小數部分。"
+    }
+  ],
+  "references": [
+    {
+      "title": "cppreference：C language",
+      "url": "https://en.cppreference.com/w/c/language"
+    }
+  ]
+}

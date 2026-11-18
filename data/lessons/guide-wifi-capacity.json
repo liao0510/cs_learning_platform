@@ -1,0 +1,101 @@
+{
+  "id": "guide-wifi-capacity",
+  "category": "wifi",
+  "subcategory": "capacity",
+  "title": "Wi-Fi 容量：PHY、Airtime、Backhaul 瓶頸",
+  "summary": "涵蓋Throughput 與容量模型的重要概念、條件、實例及自我檢測。",
+  "difficulty": "advanced",
+  "minutes": 15,
+  "keywords": [
+    "Throughput 與容量模型",
+    "三種速率不要混淆",
+    "Shannon 上界",
+    "Airtime 分享",
+    "Backhaul 多跳",
+    "Demand Satisfaction"
+  ],
+  "sections": [
+    {
+      "title": "三種速率不要混淆",
+      "type": "text",
+      "paragraphs": [
+        "PHY Rate 是實體層連線位元速率；MAC Goodput 扣掉部分協定開銷；應用 Throughput 還受到 TCP/UDP 與其他堆疊限制。"
+      ]
+    },
+    {
+      "title": "Shannon 上界",
+      "type": "text",
+      "paragraphs": [
+        "理想通道 C=B log2(1+SNR_linear) 是理論容量上界；在干擾受限簡化模型中可用 SINR 近似，但不是現成 Wi-Fi 速率表。"
+      ]
+    },
+    {
+      "title": "Airtime 分享",
+      "type": "text",
+      "paragraphs": [
+        "單一 Radio 在同一頻道上多個 Client 共享傳輸時間，退避、ACK、前導碼與重傳都需時間。"
+      ]
+    },
+    {
+      "title": "Backhaul 多跳",
+      "type": "text",
+      "paragraphs": [
+        "如果每一跳具有容量限制，單一路徑端到端速率不可能高於最小瓶頸鏈路容量；同頻半雙工中繼還可能因 airtime 競爭更低。"
+      ]
+    },
+    {
+      "title": "Demand Satisfaction",
+      "type": "text",
+      "paragraphs": [
+        "把 Client 需求與實際可供容量比較可得滿足率；覆蓋率高不表示每個 Client 需求都被滿足。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "路徑容量分別 300、120、200 Mbps，簡單瓶頸上界為 120 Mbps，不代表實際資料吞吐量就是 120 Mbps。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    },
+    {
+      "title": "Mesh 路徑瓶頸容量：互動計算",
+      "type": "formula",
+      "formula": "瓶頸容量 = min(C1,C2,C3)；僅為理想單一路徑容量上界。",
+      "details": [
+        "多跳共頻半雙工、干擾、排程會使實際 throughput 更低",
+        "容量需來自相應 MCS/airtime 假設。"
+      ],
+      "calculator": "backhaul"
+    }
+  ],
+  "takeaways": [
+    "PHY Rate 是實體層連線位元速率；MAC Goodput 扣掉部分協定開銷；應用 Throughput 還受到 TCP/UDP 與其他堆疊限制。",
+    "理想通道 C=B log2(1+SNR_linear) 是理論容量上界；在干擾受限簡化模型中可用 SINR 近似，但不是現成 Wi-Fi 速率表。",
+    "單一 Radio 在同一頻道上多個 Client 共享傳輸時間，退避、ACK、前導碼與重傳都需時間。",
+    "如果每一跳具有容量限制，單一路徑端到端速率不可能高於最小瓶頸鏈路容量；同頻半雙工中繼還可能因 airtime 競爭更低。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「三種速率不要混淆」，下列何者最合理？",
+      "choices": [
+        "PHY Rate 是實體層連線位元速率。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "PHY Rate 是實體層連線位元速率；MAC Goodput 扣掉部分協定開銷；應用 Throughput 還受到 TCP/UDP 與其他堆疊限制。"
+    }
+  ],
+  "references": [
+    {
+      "title": "Wi-Fi Alliance：Wi-Fi CERTIFIED 7",
+      "url": "https://www.wi-fi.org/discover-wi-fi/wi-fi-certified-7"
+    },
+    {
+      "title": "IEEE 802.11 標準工作組",
+      "url": "https://www.ieee802.org/11/"
+    }
+  ]
+}

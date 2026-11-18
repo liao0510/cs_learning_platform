@@ -1,0 +1,87 @@
+{
+  "id": "guide-data-structures-trees",
+  "category": "data-structures",
+  "subcategory": "trees",
+  "title": "樹狀結構：BST、AVL、Heap、B-Tree、Trie",
+  "summary": "涵蓋樹狀資料結構的重要概念、條件、實例及自我檢測。",
+  "difficulty": "intermediate",
+  "minutes": 15,
+  "keywords": [
+    "樹狀資料結構",
+    "樹與走訪",
+    "BST 與 AVL",
+    "Heap 與優先佇列",
+    "B-Tree 與 B+ Tree",
+    "Trie 前綴樹"
+  ],
+  "sections": [
+    {
+      "title": "樹與走訪",
+      "type": "text",
+      "paragraphs": [
+        "樹由根節點、父子關係構成。前序、中序、後序是深度優先走訪方式；BST 的中序走訪可得到排序後鍵值。"
+      ]
+    },
+    {
+      "title": "BST 與 AVL",
+      "type": "text",
+      "paragraphs": [
+        "BST 左子樹鍵值小、右子樹鍵值大（重複值處理依實作）；若退化成單鏈，操作可能 O(n)。AVL 透過旋轉維持高度 O(log n)。"
+      ]
+    },
+    {
+      "title": "Heap 與優先佇列",
+      "type": "text",
+      "paragraphs": [
+        "Max-heap 保證父節點不小於子節點，但不保證整體排序；可高效率取得最大值，常支援 O(log n) 插入與刪除根節點。"
+      ]
+    },
+    {
+      "title": "B-Tree 與 B+ Tree",
+      "type": "text",
+      "paragraphs": [
+        "多路平衡樹讓一個節點包含多個鍵值，減少磁碟 I/O；B+ Tree 常將資料紀錄放在葉節點並串連葉節點以利範圍掃描。"
+      ]
+    },
+    {
+      "title": "Trie 前綴樹",
+      "type": "text",
+      "paragraphs": [
+        "Trie 沿字元或位元逐層走訪，適合前綴查詢；搜尋成本與鍵長相關，而不只與資料筆數相關。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "插入 10、5、15 到 BST，根是 10，左右子節點分別是 5、15；若持續插入遞增數列，未平衡 BST 可能退化。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    }
+  ],
+  "takeaways": [
+    "樹由根節點、父子關係構成。",
+    "BST 左子樹鍵值小、右子樹鍵值大（重複值處理依實作）；若退化成單鏈，操作可能 O(n)。",
+    "Max-heap 保證父節點不小於子節點，但不保證整體排序；可高效率取得最大值，常支援 O(log n) 插入與刪除根節點。",
+    "多路平衡樹讓一個節點包含多個鍵值，減少磁碟 I/O；B+ Tree 常將資料紀錄放在葉節點並串連葉節點以利範圍掃描。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「樹與走訪」，下列何者最合理？",
+      "choices": [
+        "樹由根節點、父子關係構成。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "樹由根節點、父子關係構成。前序、中序、後序是深度優先走訪方式；BST 的中序走訪可得到排序後鍵值。"
+    }
+  ],
+  "references": [
+    {
+      "title": "OpenDSA 電腦科學教材",
+      "url": "https://opendsa-server.cs.vt.edu/"
+    }
+  ]
+}

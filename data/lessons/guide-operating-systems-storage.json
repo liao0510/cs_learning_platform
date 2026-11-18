@@ -1,0 +1,87 @@
+{
+  "id": "guide-operating-systems-storage",
+  "category": "operating-systems",
+  "subcategory": "storage",
+  "title": "File System、快取與磁碟 I/O",
+  "summary": "涵蓋儲存與檔案系統的重要概念、條件、實例及自我檢測。",
+  "difficulty": "beginner",
+  "minutes": 15,
+  "keywords": [
+    "儲存與檔案系統",
+    "檔案系統",
+    "File Descriptor",
+    "Disk Scheduling",
+    "Buffer 與 Cache",
+    "Container 與 VM"
+  ],
+  "sections": [
+    {
+      "title": "檔案系統",
+      "type": "text",
+      "paragraphs": [
+        "File System 管理檔案與目錄、權限及配置資訊；實際實作可以使用 inode、allocation table 或日誌等機制。"
+      ]
+    },
+    {
+      "title": "File Descriptor",
+      "type": "text",
+      "paragraphs": [
+        "類 Unix 系統以檔案描述子代表已開啟資源，read/write 操作和檔案偏移可能影響存取結果。"
+      ]
+    },
+    {
+      "title": "Disk Scheduling",
+      "type": "text",
+      "paragraphs": [
+        "FCFS、SSTF、SCAN 等用來說明尋道工作負載的排程，但 SSD 與現代 I/O 系統特性不同於傳統 HDD。"
+      ]
+    },
+    {
+      "title": "Buffer 與 Cache",
+      "type": "text",
+      "paragraphs": [
+        "Buffer 常用於暫存待傳資料，Cache 用於重用資料以減少較慢層級的存取；兩者可能重疊。"
+      ]
+    },
+    {
+      "title": "Container 與 VM",
+      "type": "text",
+      "paragraphs": [
+        "虛擬機提供虛擬化硬體與獨立客體 OS；Container 通常共享宿主核心並利用隔離機制。"
+      ]
+    },
+    {
+      "title": "實際情境與帶入範例",
+      "type": "text",
+      "paragraphs": [
+        "順序讀取大型檔案常受 I/O 吞吐量影響；重複讀取熱資料則可能受益於 OS Page Cache。",
+        "請對照前面各節的概念，辨識這個例子用到的假設；如果硬體、資料型態或協定條件不同，結果可能需要重新推導。"
+      ]
+    }
+  ],
+  "takeaways": [
+    "File System 管理檔案與目錄、權限及配置資訊；實際實作可以使用 inode、allocation table 或日誌等機制。",
+    "類 Unix 系統以檔案描述子代表已開啟資源，read/write 操作和檔案偏移可能影響存取結果。",
+    "FCFS、SSTF、SCAN 等用來說明尋道工作負載的排程，但 SSD 與現代 I/O 系統特性不同於傳統 HDD。",
+    "Buffer 常用於暫存待傳資料，Cache 用於重用資料以減少較慢層級的存取；兩者可能重疊。"
+  ],
+  "quiz": [
+    {
+      "question": "關於「檔案系統」，下列何者最合理？",
+      "choices": [
+        "File System 管理檔案與目錄、權限及配置資訊。",
+        "任何條件下都能保證 O(1) 且沒有成本。",
+        "所有情況都不需要注意前提與限制。",
+        "只要名稱相同，所有設備與實作必定完全一致。"
+      ],
+      "answer": 0,
+      "explanation": "File System 管理檔案與目錄、權限及配置資訊；實際實作可以使用 inode、allocation table 或日誌等機制。"
+    }
+  ],
+  "references": [
+    {
+      "title": "Operating Systems: Three Easy Pieces",
+      "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/"
+    }
+  ]
+}
